@@ -1,7 +1,16 @@
 # 사전평가 15개 항목별 보완 근거
 
-사용자가 전달한 2026-10-04 19:06:38 사전평가는 13/15 통과(87%)였다.
-아래는 해당 지적에 대응한 로컬 보완본의 근거다. 평가 AI의 재채점 결과는 아직 확인하지 않았다.
+사용자가 전달한 사전평가 이력은 다음과 같다.
+
+| 평가 시각 | 결과 | FAIL 항목 |
+|---|---|---|
+| 2026-10-04 19:06:38 | 13/15 통과(87%) | #5 실행 스크린샷, #15 난관·해결 기록 |
+| 2026-10-05 02:24:16 | 14/15 통과(93%) | #10 DB vs 엑셀 비교 |
+
+2차 평가에서 지적한 비교 설명은 기존 [docs/design.md](design.md#엑셀과-관계형-db)에 포함되어 있다.
+확인 경로를 줄이기 위해 [README 상단의 DB vs 엑셀](../README.md#db-vs-엑셀)에
+관계 저장·참조 무결성·중복 관리·입력 제약·부모 삭제 비교 본문과 실제 오류 로그 링크를 직접 배치했다.
+아래는 현재 보완본의 근거이며, README 상단 보완 이후의 재평가 결과는 아직 확인하지 않았다.
 
 | 항목 | 확인할 내용 | 제출 근거 |
 |---|---|---|
@@ -14,7 +23,7 @@
 | #7 관계 시나리오 | 고객→주문, 주문→상세, 메뉴→상세의 생성·수정·삭제 예시 | [키와 제약조건](design.md#키와-제약조건) |
 | #8 타입 | SQLite TEXT 날짜와 DATE/DATETIME/TIMESTAMP 비교 | [재현과 SQLite 문법](design.md#재현과-sqlite-문법) |
 | #9 인덱스 | SCAN·임시 정렬 → COVERING INDEX SEARCH 비교 | [Q16 로그](../results/q16.txt), [Q16 PNG](../results/screenshots/q16.png), [해석](design.md#인덱스) |
-| #10 DB·엑셀 | 이메일 중복, 없는 고객 참조, 부모 삭제를 표로 비교 | [엑셀과 관계형 DB](design.md#엑셀과-관계형-db) |
+| #10 DB·엑셀 | 관계 저장·무결성·중복·입력 제약·부모 삭제를 README 상단에서 직접 비교 | [README DB vs 엑셀 본문](../README.md#db-vs-엑셀), [상세 설명](design.md#엑셀과-관계형-db) |
 | #11 PK·FK 동작 | PK 중복·없는 부모·부모 삭제 SQL과 실제 오류 | [SQL 예시](design.md#키와-제약조건), [E03 PNG](../results/screenshots/e03.png) |
 | #12 JOIN | 같은 고객 1·11에 대해 INNER 3행 / LEFT 4행(NULL 포함) 비교 | [INNER PNG](../results/screenshots/e04.png), [LEFT PNG](../results/screenshots/e05.png) |
 | #13 집계 경계 | COUNT·SUM·AVG의 NULL/0 처리, DISTINCT와 빈 입력 | [설명](design.md#sql을-어떻게-구분하나), [E06 로그](../results/e06.txt), [E06 PNG](../results/screenshots/e06.png) |
