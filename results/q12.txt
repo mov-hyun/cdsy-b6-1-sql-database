@@ -1,0 +1,17 @@
+Q12 | 서브쿼리: 판매 중인 메뉴의 평균 가격보다 비싼 판매 중 메뉴를 확인한다.
+Source: sql/03_queries.sql
+
+SQL:
+SELECT menu_id, name, price
+FROM menu
+WHERE is_available = 1
+  AND price > (SELECT AVG(price) FROM menu WHERE is_available = 1)
+ORDER BY price DESC, menu_id;
+RESULT:
+menu_id	name	price
+10	치즈케이크	6000
+5	콜드브루	5500
+3	바닐라라테	5000
+7	말차라테	5000
+4	카푸치노	4800
+(5 rows)

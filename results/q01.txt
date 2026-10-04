@@ -1,0 +1,16 @@
+Q01 | 기본 조회: 판매 중인 커피 메뉴를 가격 오름차순으로 확인한다.
+Source: sql/03_queries.sql
+
+SQL:
+SELECT menu_id, name, price
+FROM menu
+WHERE category = 'coffee' AND is_available = 1
+ORDER BY price, menu_id;
+RESULT:
+menu_id	name	price
+1	아메리카노	3000
+2	카페라테	4500
+4	카푸치노	4800
+3	바닐라라테	5000
+5	콜드브루	5500
+(5 rows)

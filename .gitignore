@@ -1,0 +1,8 @@
+# SQL과 실제 실행 결과는 제출하고, 재생성 가능한 DB는 제외한다.
+data/*.db
+data/*.db-*
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+Thumbs.db

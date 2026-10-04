@@ -1,0 +1,21 @@
+M02 | 판매량 TOP 5: 완료 주문의 메뉴별 총수량, 동률이면 menu_id 오름차순이다.
+Source: bonus/03_report.sql
+
+SQL:
+SELECT m.menu_id, m.name, SUM(i.quantity) AS sold_quantity,
+       SUM(i.quantity * i.unit_price) AS sales_amount
+FROM menu AS m
+INNER JOIN order_item AS i ON i.menu_id = m.menu_id
+INNER JOIN cafe_order AS o ON o.order_id = i.order_id
+WHERE o.status = 'completed'
+GROUP BY m.menu_id, m.name
+ORDER BY sold_quantity DESC, m.menu_id
+LIMIT 5;
+RESULT:
+menu_id	name	sold_quantity	sales_amount
+8	버터크루아상	8	28000
+1	아메리카노	5	15000
+9	초코머핀	4	16000
+10	치즈케이크	4	24000
+2	카페라테	3	13500
+(5 rows)

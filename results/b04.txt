@@ -1,0 +1,32 @@
+B04 | 수정: 존재하는 고객 1을 참조하면 입력 가능하다. 실습 후 ROLLBACK으로 복구한다.
+Source: bonus/02_integrity.sql
+
+SQL:
+BEGIN TRANSACTION;
+RESULT:
+OK
+
+SQL:
+INSERT INTO cafe_order (order_id, customer_id, ordered_at, status)
+VALUES (99, 1, '2026-10-04 12:00:00', 'placed');
+RESULT:
+(1 rows affected)
+
+SQL:
+SELECT order_id, customer_id, status FROM cafe_order WHERE order_id = 99;
+RESULT:
+order_id	customer_id	status
+99	1	placed
+(1 rows)
+
+SQL:
+ROLLBACK;
+RESULT:
+OK
+
+SQL:
+SELECT COUNT(*) AS remaining_practice_orders FROM cafe_order WHERE order_id = 99;
+RESULT:
+remaining_practice_orders
+0
+(1 rows)

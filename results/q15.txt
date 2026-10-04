@@ -1,0 +1,36 @@
+Q15 | DELETE: 주문 없는 삭제실습고객만 삭제한다(고객 수 12 -> 11).
+Source: sql/03_queries.sql
+
+SQL:
+SELECT customer_id, name FROM customer WHERE customer_id = 12;
+RESULT:
+customer_id	name
+12	삭제실습고객
+(1 rows)
+
+SQL:
+DELETE FROM customer
+WHERE customer_id = 12
+  AND NOT EXISTS (SELECT 1 FROM cafe_order WHERE customer_id = 12);
+RESULT:
+(1 rows affected)
+
+SQL:
+SELECT changes() AS deleted_rows; -- SQLite 전용
+RESULT:
+deleted_rows
+1
+(1 rows)
+
+SQL:
+SELECT customer_id, name FROM customer WHERE customer_id = 12;
+RESULT:
+customer_id	name
+(0 rows)
+
+SQL:
+SELECT COUNT(*) AS remaining_customers FROM customer;
+RESULT:
+remaining_customers
+11
+(1 rows)

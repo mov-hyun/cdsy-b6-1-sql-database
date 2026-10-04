@@ -1,0 +1,25 @@
+Q08 | 다중 INNER JOIN: 10월 완료 주문의 고객과 구매 메뉴를 한 번에 확인한다.
+Source: sql/03_queries.sql
+
+SQL:
+SELECT o.order_id, c.name AS customer_name, m.name AS menu_name,
+       i.quantity, i.quantity * i.unit_price AS line_amount
+FROM cafe_order AS o
+INNER JOIN customer AS c ON c.customer_id = o.customer_id
+INNER JOIN order_item AS i ON i.order_id = o.order_id
+INNER JOIN menu AS m ON m.menu_id = i.menu_id
+WHERE o.status = 'completed'
+  AND o.ordered_at >= '2026-10-01 00:00:00'
+  AND o.ordered_at < '2026-11-01 00:00:00'
+ORDER BY o.order_id, i.order_item_id;
+RESULT:
+order_id	customer_name	menu_name	quantity	line_amount
+11	고객03	바닐라라테	1	5000
+11	고객03	초코머핀	1	4000
+12	고객09	얼그레이	2	9000
+12	고객09	버터크루아상	1	3500
+13	고객01	아메리카노	2	6000
+13	고객01	치즈케이크	1	6000
+15	고객10	콜드브루	2	11000
+15	고객10	버터크루아상	2	7000
+(8 rows)

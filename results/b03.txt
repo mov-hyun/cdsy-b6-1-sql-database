@@ -1,0 +1,9 @@
+B03 | FK 위반: 존재하지 않는 고객 999를 참조하는 주문 입력은 차단되어야 한다.
+Source: bonus/02_integrity.sql
+
+SQL:
+-- EXPECT_ERROR: FOREIGN KEY constraint failed
+INSERT INTO cafe_order (order_id, customer_id, ordered_at, status)
+VALUES (99, 999, '2026-10-04 12:00:00', 'placed');
+RESULT:
+EXPECTED ERROR: FOREIGN KEY constraint failed

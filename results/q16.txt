@@ -1,0 +1,37 @@
+Q16 | 인덱스: 고객별 주문 검색과 시간순 정렬을 위해 (customer_id, ordered_at)에 생성한다.
+Source: sql/03_queries.sql
+
+SQL:
+-- SQLite 전용 EXPLAIN QUERY PLAN으로 전후 접근 방식을 확인하며 속도 향상을 단정하지 않는다.
+EXPLAIN QUERY PLAN
+SELECT order_id, ordered_at FROM cafe_order
+WHERE customer_id = 1 ORDER BY ordered_at;
+RESULT:
+id	parent	notused	detail
+3	0	216	SCAN cafe_order
+12	0	0	USE TEMP B-TREE FOR ORDER BY
+(2 rows)
+
+SQL:
+CREATE INDEX idx_cafe_order_customer_time ON cafe_order(customer_id, ordered_at);
+RESULT:
+OK
+
+SQL:
+EXPLAIN QUERY PLAN
+SELECT order_id, ordered_at FROM cafe_order
+WHERE customer_id = 1 ORDER BY ordered_at;
+RESULT:
+id	parent	notused	detail
+3	0	55	SEARCH cafe_order USING COVERING INDEX idx_cafe_order_customer_time (customer_id=?)
+(1 rows)
+
+SQL:
+SELECT order_id, ordered_at FROM cafe_order
+WHERE customer_id = 1 ORDER BY ordered_at;
+RESULT:
+order_id	ordered_at
+1	2026-09-01 09:00:00
+3	2026-09-03 08:30:00
+13	2026-10-02 08:00:00
+(3 rows)

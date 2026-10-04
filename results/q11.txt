@@ -1,0 +1,29 @@
+Q11 | 집계 AVG: 고객별 완료 주문의 평균 주문 금액을 구한다(상세 항목 평균과 구분).
+Source: sql/03_queries.sql
+
+SQL:
+SELECT c.customer_id, c.name, COUNT(*) AS completed_order_count,
+       ROUND(AVG(t.order_amount), 2) AS average_order_amount
+FROM customer AS c
+INNER JOIN (
+    SELECT o.order_id, o.customer_id,
+           SUM(i.quantity * i.unit_price) AS order_amount
+    FROM cafe_order AS o
+    INNER JOIN order_item AS i ON i.order_id = o.order_id
+    WHERE o.status = 'completed'
+    GROUP BY o.order_id, o.customer_id
+) AS t ON t.customer_id = c.customer_id
+GROUP BY c.customer_id, c.name
+ORDER BY c.customer_id;
+RESULT:
+customer_id	name	completed_order_count	average_order_amount
+1	고객01	3	10166.67
+2	고객02	2	10500.0
+3	고객03	2	13000.0
+5	고객05	1	11500.0
+6	고객06	1	12500.0
+7	고객07	1	13500.0
+8	고객08	1	10800.0
+9	고객09	1	12500.0
+10	고객10	1	18000.0
+(9 rows)

@@ -1,0 +1,38 @@
+Q14 | UPDATE: 아메리카노 현재 가격을 3,200원으로 바꾸고 과거 주문 단가 보존을 확인한다.
+Source: sql/03_queries.sql
+
+SQL:
+SELECT menu_id, name, price FROM menu WHERE menu_id = 1;
+RESULT:
+menu_id	name	price
+1	아메리카노	3000
+(1 rows)
+
+SQL:
+UPDATE menu SET price = 3200 WHERE menu_id = 1;
+RESULT:
+(1 rows affected)
+
+SQL:
+SELECT changes() AS updated_rows; -- SQLite 전용: 직전 DML의 변경 행 수
+RESULT:
+updated_rows
+1
+(1 rows)
+
+SQL:
+SELECT menu_id, name, price FROM menu WHERE menu_id = 1;
+RESULT:
+menu_id	name	price
+1	아메리카노	3200
+(1 rows)
+
+SQL:
+SELECT order_item_id, order_id, unit_price
+FROM order_item WHERE menu_id = 1 ORDER BY order_item_id;
+RESULT:
+order_item_id	order_id	unit_price
+1	1	3000
+5	3	3000
+25	13	3000
+(3 rows)

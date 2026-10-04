@@ -1,0 +1,17 @@
+Q02 | 기본 조회: 2026년 9월에 가입한 고객을 최근 가입 순으로 확인한다.
+Source: sql/03_queries.sql
+
+SQL:
+SELECT customer_id, name, joined_on
+FROM customer
+WHERE joined_on >= '2026-09-01' AND joined_on < '2026-10-01'
+ORDER BY joined_on DESC, customer_id;
+RESULT:
+customer_id	name	joined_on
+12	삭제실습고객	2026-09-30
+11	고객11	2026-09-25
+10	고객10	2026-09-20
+9	고객09	2026-09-15
+8	고객08	2026-09-05
+7	고객07	2026-09-01
+(6 rows)

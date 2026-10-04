@@ -1,0 +1,17 @@
+Q03 | 기본 조회: 최근 완료 주문 5개를 확인한다.
+Source: sql/03_queries.sql
+
+SQL:
+SELECT order_id, customer_id, ordered_at
+FROM cafe_order
+WHERE status = 'completed'
+ORDER BY ordered_at DESC, order_id DESC
+LIMIT 5;
+RESULT:
+order_id	customer_id	ordered_at
+15	10	2026-10-03 15:00:00
+13	1	2026-10-02 08:00:00
+12	9	2026-10-01 17:00:00
+11	3	2026-10-01 09:30:00
+10	8	2026-09-20 13:00:00
+(5 rows)

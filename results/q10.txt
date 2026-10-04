@@ -1,0 +1,25 @@
+Q10 | 집계 SUM: 완료 주문에서 메뉴별 판매 수량과 매출을 집계한다.
+Source: sql/03_queries.sql
+
+SQL:
+SELECT m.menu_id, m.name, SUM(i.quantity) AS sold_quantity,
+       SUM(i.quantity * i.unit_price) AS sales_amount
+FROM menu AS m
+INNER JOIN order_item AS i ON i.menu_id = m.menu_id
+INNER JOIN cafe_order AS o ON o.order_id = i.order_id
+WHERE o.status = 'completed'
+GROUP BY m.menu_id, m.name
+ORDER BY sold_quantity DESC, m.menu_id;
+RESULT:
+menu_id	name	sold_quantity	sales_amount
+8	버터크루아상	8	28000
+1	아메리카노	5	15000
+9	초코머핀	4	16000
+10	치즈케이크	4	24000
+2	카페라테	3	13500
+3	바닐라라테	3	15000
+5	콜드브루	3	16500
+6	얼그레이	3	13500
+7	말차라테	2	10000
+4	카푸치노	1	4800
+(10 rows)

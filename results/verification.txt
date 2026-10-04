@@ -1,0 +1,44 @@
+PASS | 외래키 검사 활성화
+PASS | 초기 행 수 customer/menu/cafe_order/order_item = (12, 12, 16, 32)
+PASS | customer: PK 존재
+PASS | menu: PK 존재
+PASS | cafe_order: PK 존재
+PASS | order_item: PK 존재
+PASS | 3개 FK로 1:N 관계 구성
+PASS | 뷰 및 트리거 미사용
+PASS | 없는 고객 FK 차단: FOREIGN KEY constraint failed
+PASS | 없는 주문 FK 차단: FOREIGN KEY constraint failed
+PASS | 없는 메뉴 FK 차단: FOREIGN KEY constraint failed
+PASS | 참조 중인 고객 삭제 차단: FOREIGN KEY constraint failed
+PASS | 참조 중인 주문 삭제 차단: FOREIGN KEY constraint failed
+PASS | 참조 중인 메뉴 삭제 차단: FOREIGN KEY constraint failed
+PASS | 중복 PK 차단: UNIQUE constraint failed: customer.customer_id
+PASS | 중복 이메일 UNIQUE 차단: UNIQUE constraint failed: customer.email
+PASS | 이름 NOT NULL 차단: NOT NULL constraint failed: customer.name
+PASS | 0 수량 CHECK 차단: CHECK constraint failed: typeof(quantity) = 'integer' AND quantity > 0
+PASS | 소수 수량 CHECK 차단: CHECK constraint failed: typeof(quantity) = 'integer' AND quantity > 0
+PASS | 음수 가격 CHECK 차단: CHECK constraint failed: typeof(price) = 'integer' AND price > 0
+PASS | 잘못된 상태 CHECK 차단: CHECK constraint failed: status IN ('placed', 'completed', 'cancelled')
+PASS | 주문 내 동일 메뉴 UNIQUE 차단: UNIQUE constraint failed: order_item.order_id, order_item.menu_id
+PASS | Q01~Q16 전체 실행
+PASS | LEFT JOIN: 주문 없는 고객 11, 12
+PASS | 고객01 완료 주문 3건, 상세 수로 중복 집계하지 않음
+PASS | 완료 주문 없는 고객 3명도 0건으로 유지
+PASS | 평균 주문 금액은 고객01의 30,500 / 3 = 10,166.67원
+PASS | 미판매 메뉴 11, 12
+PASS | UPDATE 1행, 현재 가격 3,200원
+PASS | 과거 아메리카노 주문 단가 3,000원 보존
+PASS | DELETE 1행, 삭제 대상 없음, 고객 11행 유지
+PASS | 고객/주문시간 복합 인덱스 생성
+PASS | JOIN과 EXISTS 결과 동일: 구매 고객 9명
+PASS | 정정 INSERT 성공 후 실습 주문 롤백
+PASS | 월별 주문/매출: 9월 9건 104,800원, 10월 4건 51,500원
+PASS | 판매량 1위 크루아상 8개, 28,000원
+PASS | 반복 구매 고객 비율 3 / 9 = 33.33%
+PASS | 완료 주문 0건: 매출/랭킹 빈 결과, 구매자 0명, 비율 NULL
+PASS | 변경 후 모든 테이블 10행 이상: (11, 12, 16, 32)
+PASS | 최종 FK 위반 0건
+PASS | 최종 DB integrity_check = ok
+PASS | 핵심 SQL 파일 전체 실행과 결과 수집 실행의 최종 DB 동일
+
+42 checks passed.

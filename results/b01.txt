@@ -1,0 +1,21 @@
+B01 | JOIN 방식: 주문 수만큼 생기는 중복 고객을 DISTINCT로 제거한다.
+Source: bonus/01_join_subquery.sql
+
+SQL:
+SELECT DISTINCT c.customer_id, c.name
+FROM customer AS c
+INNER JOIN cafe_order AS o ON o.customer_id = c.customer_id
+WHERE o.status = 'completed'
+ORDER BY c.customer_id;
+RESULT:
+customer_id	name
+1	고객01
+2	고객02
+3	고객03
+5	고객05
+6	고객06
+7	고객07
+8	고객08
+9	고객09
+10	고객10
+(9 rows)

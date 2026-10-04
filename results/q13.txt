@@ -1,0 +1,18 @@
+Q13 | 서브쿼리 NOT EXISTS: 완료 주문에서 한 번도 판매되지 않은 메뉴를 찾는다.
+Source: sql/03_queries.sql
+
+SQL:
+SELECT m.menu_id, m.name
+FROM menu AS m
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM order_item AS i
+    INNER JOIN cafe_order AS o ON o.order_id = i.order_id
+    WHERE i.menu_id = m.menu_id AND o.status = 'completed'
+)
+ORDER BY m.menu_id;
+RESULT:
+menu_id	name
+11	딸기스무디
+12	캐모마일
+(2 rows)

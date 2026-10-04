@@ -1,0 +1,14 @@
+Q07 | LEFT JOIN: 어떤 상태의 주문도 없는 고객을 확인한다.
+Source: sql/03_queries.sql
+
+SQL:
+SELECT c.customer_id, c.name
+FROM customer AS c
+LEFT JOIN cafe_order AS o ON o.customer_id = c.customer_id
+WHERE o.order_id IS NULL
+ORDER BY c.customer_id;
+RESULT:
+customer_id	name
+11	고객11
+12	삭제실습고객
+(2 rows)

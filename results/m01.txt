@@ -1,0 +1,18 @@
+M01 | 월별 완료 주문 건수와 매출: 취소·접수 주문을 제외하고 주문 중복 집계를 방지한다.
+Source: bonus/03_report.sql
+
+SQL:
+-- SQLite substr()로 ISO 8601 시각에서 YYYY-MM 부분을 추출한다.
+SELECT substr(o.ordered_at, 1, 7) AS order_month,
+       COUNT(DISTINCT o.order_id) AS completed_order_count,
+       SUM(i.quantity * i.unit_price) AS sales_amount
+FROM cafe_order AS o
+INNER JOIN order_item AS i ON i.order_id = o.order_id
+WHERE o.status = 'completed'
+GROUP BY substr(o.ordered_at, 1, 7)
+ORDER BY order_month;
+RESULT:
+order_month	completed_order_count	sales_amount
+2026-09	9	104800
+2026-10	4	51500
+(2 rows)

@@ -1,0 +1,9 @@
+Python 3.12.14
+SQLite 3.53.1
+Engine: Python standard-library sqlite3 (local SQLite)
+Foreign keys: ON on every execution connection
+Core: fresh schema -> seed -> Q01 through Q16
+Bonus: separate fresh schema -> seed -> B01 through B04 -> M01 through M03
+Money: integer KRW; sample dates: 2026-09-01 through 2026-10-04
+Initial row counts: {'customer': 12, 'menu': 12, 'cafe_order': 16, 'order_item': 32}
+Final row counts: {'customer': 11, 'menu': 12, 'cafe_order': 16, 'order_item': 32}

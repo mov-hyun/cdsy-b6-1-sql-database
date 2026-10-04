@@ -1,0 +1,25 @@
+Q09 | 집계 COUNT: 고객별 완료 주문 건수를 집계하며 구매 없는 고객도 0으로 표시한다.
+Source: sql/03_queries.sql
+
+SQL:
+SELECT c.customer_id, c.name, COUNT(o.order_id) AS completed_order_count
+FROM customer AS c
+LEFT JOIN cafe_order AS o
+    ON o.customer_id = c.customer_id AND o.status = 'completed'
+GROUP BY c.customer_id, c.name
+ORDER BY completed_order_count DESC, c.customer_id;
+RESULT:
+customer_id	name	completed_order_count
+1	고객01	3
+2	고객02	2
+3	고객03	2
+5	고객05	1
+6	고객06	1
+7	고객07	1
+8	고객08	1
+9	고객09	1
+10	고객10	1
+4	고객04	0
+11	고객11	0
+12	삭제실습고객	0
+(12 rows)

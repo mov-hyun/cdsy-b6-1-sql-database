@@ -1,0 +1,15 @@
+Q06 | INNER JOIN: 1번 주문의 메뉴, 수량, 주문 당시 단가와 항목 금액을 확인한다.
+Source: sql/03_queries.sql
+
+SQL:
+SELECT i.order_item_id, m.name AS menu_name, i.quantity, i.unit_price,
+       i.quantity * i.unit_price AS line_amount
+FROM order_item AS i
+INNER JOIN menu AS m ON m.menu_id = i.menu_id
+WHERE i.order_id = 1
+ORDER BY i.order_item_id;
+RESULT:
+order_item_id	menu_name	quantity	unit_price	line_amount
+1	아메리카노	2	3000	6000
+2	버터크루아상	1	3500	3500
+(2 rows)

@@ -1,0 +1,19 @@
+M03 | 기간 내 반복 구매 고객 비율(%): 완료 주문 2회 이상 고객 / 1회 이상 고객 * 100.
+Source: bonus/03_report.sql
+
+SQL:
+-- 100.0은 정수 나눗셈을 피한다. 구매 고객이 0명이면 비율은 NULL(정의 불가)이다.
+SELECT COUNT(*) AS purchasing_customers,
+       COALESCE(SUM(CASE WHEN order_count >= 2 THEN 1 ELSE 0 END), 0) AS repeat_customers,
+       ROUND(100.0 * SUM(CASE WHEN order_count >= 2 THEN 1 ELSE 0 END)
+             / NULLIF(COUNT(*), 0), 2) AS repeat_customer_rate_percent
+FROM (
+    SELECT customer_id, COUNT(*) AS order_count
+    FROM cafe_order
+    WHERE status = 'completed'
+    GROUP BY customer_id
+) AS customer_orders;
+RESULT:
+purchasing_customers	repeat_customers	repeat_customer_rate_percent
+9	3	33.33
+(1 rows)

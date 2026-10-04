@@ -1,0 +1,14 @@
+Q04 | 기본 조회: 이름에 라테가 포함된 메뉴를 검색한다.
+Source: sql/03_queries.sql
+
+SQL:
+SELECT menu_id, name, price
+FROM menu
+WHERE name LIKE '%라테%'
+ORDER BY menu_id;
+RESULT:
+menu_id	name	price
+2	카페라테	4500
+3	바닐라라테	5000
+7	말차라테	5000
+(3 rows)

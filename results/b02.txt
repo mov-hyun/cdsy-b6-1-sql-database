@@ -1,0 +1,23 @@
+B02 | 서브쿼리 방식: EXISTS로 완료 주문 존재 여부만 확인한다.
+Source: bonus/01_join_subquery.sql
+
+SQL:
+SELECT c.customer_id, c.name
+FROM customer AS c
+WHERE EXISTS (
+    SELECT 1 FROM cafe_order AS o
+    WHERE o.customer_id = c.customer_id AND o.status = 'completed'
+)
+ORDER BY c.customer_id;
+RESULT:
+customer_id	name
+1	고객01
+2	고객02
+3	고객03
+5	고객05
+6	고객06
+7	고객07
+8	고객08
+9	고객09
+10	고객10
+(9 rows)
