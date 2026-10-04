@@ -30,6 +30,11 @@ PASS | UPDATE 1행, 현재 가격 3,200원
 PASS | 과거 아메리카노 주문 단가 3,000원 보존
 PASS | DELETE 1행, 삭제 대상 없음, 고객 11행 유지
 PASS | 고객/주문시간 복합 인덱스 생성
+PASS | COUNT 출력으로 네 테이블 초기 행 수 증명
+PASS | INNER JOIN 비교: 연결된 주문 3행
+PASS | LEFT JOIN 비교: 주문 없는 고객도 NULL로 유지
+PASS | 빈 집계의 COUNT=0, SUM/AVG=NULL 확인
+PASS | NULL 제외, 0 포함, DISTINCT 중복 제거 확인
 PASS | JOIN과 EXISTS 결과 동일: 구매 고객 9명
 PASS | 정정 INSERT 성공 후 실습 주문 롤백
 PASS | 월별 주문/매출: 9월 9건 104,800원, 10월 4건 51,500원
@@ -41,4 +46,4 @@ PASS | 최종 FK 위반 0건
 PASS | 최종 DB integrity_check = ok
 PASS | 핵심 SQL 파일 전체 실행과 결과 수집 실행의 최종 DB 동일
 
-42 checks passed.
+47 checks passed.

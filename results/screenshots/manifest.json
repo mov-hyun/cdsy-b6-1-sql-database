@@ -1,0 +1,210 @@
+{
+  "engine": "Python 3.12.14 · SQLite 3.53.1",
+  "browser": "Microsoft Edge 154.0.4258.53",
+  "method": "Actual SQLite execution -> unchanged result text -> browser document -> Playwright screenshot",
+  "captures": [
+    {
+      "source": "results/b01.txt",
+      "source_sha256_lf": "ae804cb5153d693449430f166b5c8324d6024c3781d8204db95d6cf086d26df5",
+      "screenshot": "results/screenshots/b01.png",
+      "width": 1440,
+      "height": 1130
+    },
+    {
+      "source": "results/b02.txt",
+      "source_sha256_lf": "0046dfa1917be46837566277bda2a848199ff4e9fb7e7880f339f82336147284",
+      "screenshot": "results/screenshots/b02.png",
+      "width": 1440,
+      "height": 1183
+    },
+    {
+      "source": "results/b03.txt",
+      "source_sha256_lf": "f346f576d55e42b7d6e1e4127ee8f857bfab5260609ca51324b2579a514072a8",
+      "screenshot": "results/screenshots/b03.png",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "source": "results/b04.txt",
+      "source_sha256_lf": "0aa20c4d406f1f9a907de74c3239926a004b0692927d231bbf475644515fcdfd",
+      "screenshot": "results/screenshots/b04.png",
+      "width": 1440,
+      "height": 1767
+    },
+    {
+      "source": "results/e01.txt",
+      "source_sha256_lf": "5d76b53974d2900f36096050ea89434bc3be1c5b5df710b19e28b190f234033c",
+      "screenshot": "results/screenshots/e01.png",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "source": "results/e02.txt",
+      "source_sha256_lf": "dd3f64aea4d7f52a00de751d504036cf0536169f529196eeaff60b180381e71b",
+      "screenshot": "results/screenshots/e02.png",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "source": "results/e03.txt",
+      "source_sha256_lf": "20bd68063b7a6d7765e5840b113d7020779f695e148bbdb05b8ad9e1dc55d497",
+      "screenshot": "results/screenshots/e03.png",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "source": "results/e04.txt",
+      "source_sha256_lf": "539a9c0dc23d393f10f4b8dad9c7af0ee14cd06550da75cd9d61f7958bdf753c",
+      "screenshot": "results/screenshots/e04.png",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "source": "results/e05.txt",
+      "source_sha256_lf": "3a3cbb7bffbfcdfb4cdcfe8fa4a18916259cdc551c0de9dcc0e0e37d21176cf7",
+      "screenshot": "results/screenshots/e05.png",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "source": "results/e06.txt",
+      "source_sha256_lf": "6996d220276ee38a8342f1f3be3cf618735ab36a7356c49e25664ff16e45782a",
+      "screenshot": "results/screenshots/e06.png",
+      "width": 1440,
+      "height": 1159
+    },
+    {
+      "source": "results/m01.txt",
+      "source_sha256_lf": "8b33199cc359ff34d7437603c1191bab1f3930f6b941e5214800613eb8171613",
+      "screenshot": "results/screenshots/m01.png",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "source": "results/m02.txt",
+      "source_sha256_lf": "55550815cfa8c8598db60848114e94945c7f0aecb634458855cb7675d7933dd8",
+      "screenshot": "results/screenshots/m02.png",
+      "width": 1440,
+      "height": 1068
+    },
+    {
+      "source": "results/m03.txt",
+      "source_sha256_lf": "abee28b910f9f276585c734dac6dba95b25512e9ba40bef81cf565d3727e90ad",
+      "screenshot": "results/screenshots/m03.png",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "source": "results/q01.txt",
+      "source_sha256_lf": "f046ef6e390040f867bddf363bab3c621aa919da5291e2e3683dc6c421befcf6",
+      "screenshot": "results/screenshots/q01.png",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "source": "results/q02.txt",
+      "source_sha256_lf": "1f6c175fc22e920071891d2ffdcc663a2684af063b35fa81d77d749384abc470",
+      "screenshot": "results/screenshots/q02.png",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "source": "results/q03.txt",
+      "source_sha256_lf": "f0ac50c99e064666ccddfbec96358ab744dce2a918449fad78e781a25682c2e4",
+      "screenshot": "results/screenshots/q03.png",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "source": "results/q04.txt",
+      "source_sha256_lf": "76c6c8b0d67522433e36c554855563b54f7d76082d7416469aa45faf86df506e",
+      "screenshot": "results/screenshots/q04.png",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "source": "results/q05.txt",
+      "source_sha256_lf": "f20fa5a3d01d603cd738eb31ecfc8805a1b0cb4367af05ebaf64b66ad845be14",
+      "screenshot": "results/screenshots/q05.png",
+      "width": 1440,
+      "height": 1398
+    },
+    {
+      "source": "results/q06.txt",
+      "source_sha256_lf": "6cfa1deae20b9088dea5fef582efbf706e8bf7a87c867c0e09280182166b3e2e",
+      "screenshot": "results/screenshots/q06.png",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "source": "results/q07.txt",
+      "source_sha256_lf": "be0d8183cd8204aa70bcb2e1bae84a406d3dec2f6c8c5b17051d50bc00bca1e8",
+      "screenshot": "results/screenshots/q07.png",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "source": "results/q08.txt",
+      "source_sha256_lf": "7d5521e530cc3d5b5376534c434df821c614dcb83194d6c5446e06ab90c30c58",
+      "screenshot": "results/screenshots/q08.png",
+      "width": 1440,
+      "height": 1220
+    },
+    {
+      "source": "results/q09.txt",
+      "source_sha256_lf": "754e61a4f828da2c58fa33d47282e381c4d3adb4eedff415b337c4c9e8c96604",
+      "screenshot": "results/screenshots/q09.png",
+      "width": 1440,
+      "height": 1283
+    },
+    {
+      "source": "results/q10.txt",
+      "source_sha256_lf": "180513c8d76aa4f99cf93b3df096bf97d8dcc44237c2cbbf5f22eb8c32465bda",
+      "screenshot": "results/screenshots/q10.png",
+      "width": 1440,
+      "height": 1252
+    },
+    {
+      "source": "results/q11.txt",
+      "source_sha256_lf": "505dcdd633542c0dfec5f990ee117f08e65b4294d1fae2948c31f4c523bb36b8",
+      "screenshot": "results/screenshots/q11.png",
+      "width": 1440,
+      "height": 1342
+    },
+    {
+      "source": "results/q12.txt",
+      "source_sha256_lf": "21e82a311b04370dcb046e08163c98352259c50c47de3c514b939c4394a25a97",
+      "screenshot": "results/screenshots/q12.png",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "source": "results/q13.txt",
+      "source_sha256_lf": "2f2e5e7f79629bef36e04fe5b2f5eaa9dec747a4b1b1f2d4f660aa71a64793c0",
+      "screenshot": "results/screenshots/q13.png",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "source": "results/q14.txt",
+      "source_sha256_lf": "9d5a8691e2d85921a4d9e2cc02b8fb8c115f0c6d237e9dd66169a97ec34f0c1e",
+      "screenshot": "results/screenshots/q14.png",
+      "width": 1440,
+      "height": 1974
+    },
+    {
+      "source": "results/q15.txt",
+      "source_sha256_lf": "fbd108a085b3a923d16d1bbf0af45a6efdc39b453e0b12d6b3fec816eca87c63",
+      "screenshot": "results/screenshots/q15.png",
+      "width": 1440,
+      "height": 1866
+    },
+    {
+      "source": "results/q16.txt",
+      "source_sha256_lf": "11f4fdbdee80698ed147c514bdd08327a4c9d86960c3f366d00e48190930240d",
+      "screenshot": "results/screenshots/q16.png",
+      "width": 1440,
+      "height": 1846
+    }
+  ]
+}

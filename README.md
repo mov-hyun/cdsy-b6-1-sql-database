@@ -4,6 +4,13 @@ Codyssey B6-1 「정보를 깔끔하게 정리하는 디지털 서랍장 만들�
 SQLite로 고객·메뉴·주문·주문상세를 설계하고, SQL 실행 결과를 텍스트로 기록한다.
 샘플 이름·이메일·주문은 모두 학습용 가상 데이터다. 금액 단위는 원이다.
 
+## 평가 보완 자료
+
+- [사전평가 15개 항목별 근거](docs/evaluation-evidence.md): 코드·실행 로그·이미지·설명 위치를 한 표로 정리.
+- [실행 결과 스크린샷 29장](results/screenshots/README.md): 핵심 Q01~Q16 및 보너스·보완 결과.
+- [난관과 해결 과정](docs/troubleshooting.md): 실제 환경 문제와 의도적 SQL 실패 실습의 원인·해결·확인.
+- [캡처 출처와 재생성 방법](docs/screenshots.md): 실제 SQLite 결과를 표시한 문서 화면의 브라우저 캡처.
+
 ## 빠른 실행
 
 Python 표준 라이브러리의 SQLite 엔진을 사용한다. 별도 DB 서버나 외부 패키지가 필요하지 않다.
@@ -25,7 +32,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\run.ps1
 - `data/cafe.db`: Q01~Q16 실행까지 끝낸 로컬 SQLite DB.
 - `results/q01.txt`~`q16.txt`: 각 실습의 SQL과 실제 결과.
 - `results/b01.txt`~`b04.txt`, `m01.txt`~`m03.txt`: 보너스 실제 결과.
+- `results/e01.txt`~`e06.txt`: 행 수·PK/FK·JOIN·집계 경계 추가 검증 결과.
 - `results/verification.txt`: 데이터·제약조건·집계·실행 검증 기록.
+
+이미지는 `results/screenshots/`에 제출되어 있다. 위 Python 명령은 텍스트 결과를 재생성한다.
+SQL을 변경한 뒤에는 [이미지 재생성 안내](docs/screenshots.md)에 따라 캡처도 갱신한다.
 
 **재실행은 샘플부터 새로 구성하고 `data/cafe.db`와 위 결과 파일을 덮어쓴다.**
 직접 연습한 DB를 보존하려면 다른 파일명으로 복사해 둔다. SQL 원본은 변경하지 않는다.
@@ -39,6 +50,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\run.ps1
 | 샘플 INSERT SQL 1개 | [sql/02_seed.sql](sql/02_seed.sql) |
 | 핵심 SQL 15개 + 인덱스 | [sql/03_queries.sql](sql/03_queries.sql) |
 | 실행 결과 폴더 | [results/](results/) |
+| 실행 결과 이미지 | [results/screenshots/](results/screenshots/) |
+| 난관·해결 기록 | [docs/troubleshooting.md](docs/troubleshooting.md) |
 | 관계·설계 설명 | [docs/design.md](docs/design.md) 및 아래 ERD |
 | 보너스 SQL | [bonus/](bonus/) |
 | 지표 3개 미니 리포트 | [docs/report.md](docs/report.md) |
@@ -143,22 +156,22 @@ ERD의 자식 최소 개수 0은 실제 스키마가 허용하는 범위다. 샘
 
 | 범주 | 번호와 요구사항 | 실제 결과 |
 |---|---|---|
-| 기본 조회 4개 | Q01 판매 중 커피/가격순 | [Q01](results/q01.txt) |
-| | Q02 9월 가입 고객/최근순 | [Q02](results/q02.txt) |
-| | Q03 최근 완료 주문 5개/LIMIT | [Q03](results/q03.txt) |
-| | Q04 라테 메뉴/LIKE 검색 | [Q04](results/q04.txt) |
-| 조인 4개 | Q05 주문과 고객/INNER JOIN | [Q05](results/q05.txt) |
-| | Q06 주문상세와 메뉴/INNER JOIN | [Q06](results/q06.txt) |
-| | Q07 주문 없는 고객/LEFT JOIN | [Q07](results/q07.txt) |
-| | Q08 10월 구매 상세/4개 테이블 JOIN | [Q08](results/q08.txt) |
-| 집계 3개 | Q09 고객별 완료 주문 건수/COUNT | [Q09](results/q09.txt) |
-| | Q10 메뉴별 판매 수량·매출/SUM | [Q10](results/q10.txt) |
-| | Q11 고객별 평균 주문 금액/AVG | [Q11](results/q11.txt) |
-| 서브쿼리 2개 | Q12 평균보다 비싼 메뉴 | [Q12](results/q12.txt) |
-| | Q13 완료 주문에 없는 메뉴/NOT EXISTS | [Q13](results/q13.txt) |
-| 수정 1개 | Q14 가격 변경/UPDATE | [Q14](results/q14.txt) |
-| 삭제 1개 | Q15 주문 없는 실습 고객 삭제/DELETE | [Q15](results/q15.txt) |
-| 인덱스 1개 | Q16 고객·주문시각 복합 인덱스/전후 실행 계획 | [Q16](results/q16.txt) |
+| 기본 조회 4개 | Q01 판매 중 커피/가격순 | [Q01](results/q01.txt) / [PNG](results/screenshots/q01.png) |
+| | Q02 9월 가입 고객/최근순 | [Q02](results/q02.txt) / [PNG](results/screenshots/q02.png) |
+| | Q03 최근 완료 주문 5개/LIMIT | [Q03](results/q03.txt) / [PNG](results/screenshots/q03.png) |
+| | Q04 라테 메뉴/LIKE 검색 | [Q04](results/q04.txt) / [PNG](results/screenshots/q04.png) |
+| 조인 4개 | Q05 주문과 고객/INNER JOIN | [Q05](results/q05.txt) / [PNG](results/screenshots/q05.png) |
+| | Q06 주문상세와 메뉴/INNER JOIN | [Q06](results/q06.txt) / [PNG](results/screenshots/q06.png) |
+| | Q07 주문 없는 고객/LEFT JOIN | [Q07](results/q07.txt) / [PNG](results/screenshots/q07.png) |
+| | Q08 10월 구매 상세/4개 테이블 JOIN | [Q08](results/q08.txt) / [PNG](results/screenshots/q08.png) |
+| 집계 3개 | Q09 고객별 완료 주문 건수/COUNT | [Q09](results/q09.txt) / [PNG](results/screenshots/q09.png) |
+| | Q10 메뉴별 판매 수량·매출/SUM | [Q10](results/q10.txt) / [PNG](results/screenshots/q10.png) |
+| | Q11 고객별 평균 주문 금액/AVG | [Q11](results/q11.txt) / [PNG](results/screenshots/q11.png) |
+| 서브쿼리 2개 | Q12 평균보다 비싼 메뉴 | [Q12](results/q12.txt) / [PNG](results/screenshots/q12.png) |
+| | Q13 완료 주문에 없는 메뉴/NOT EXISTS | [Q13](results/q13.txt) / [PNG](results/screenshots/q13.png) |
+| 수정 1개 | Q14 가격 변경/UPDATE | [Q14](results/q14.txt) / [PNG](results/screenshots/q14.png) |
+| 삭제 1개 | Q15 주문 없는 실습 고객 삭제/DELETE | [Q15](results/q15.txt) / [PNG](results/screenshots/q15.png) |
+| 인덱스 1개 | Q16 고객·주문시각 복합 인덱스/전후 실행 계획 | [Q16](results/q16.txt) / [PNG](results/screenshots/q16.png) |
 
 ## 보너스
 
@@ -177,7 +190,7 @@ GUI에서 보너스 FK 파일 전체 실행이 오류로 중단되면 B04 블록
 
 ## 검증 및 범위
 
-[verification.txt](results/verification.txt)에 42개 검증 결과가 있다.
+[verification.txt](results/verification.txt)에 47개 검증 결과가 있다.
 3개 FK의 잘못된 참조, 참조 중인 부모 삭제, PK/UNIQUE/NOT NULL/CHECK 위반을 실제로 시도한다.
 집계에는 수작업으로 계산한 기대값을 대조하고, 완료 주문이 0건인 경우도 확인한다.
 핵심 SQL 파일 전체를 일반 실행한 DB와 쿼리별 결과를 수집한 DB가 같은지도 검사한다.

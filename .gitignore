@@ -6,3 +6,5 @@ __pycache__/
 .venv/
 .DS_Store
 Thumbs.db
+# 캡처 중간 HTML/브라우저 산출물. 제출용 PNG는 results/screenshots에 둔다.
+output/playwright/

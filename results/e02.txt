@@ -1,0 +1,8 @@
+E02 | 부모 삭제 제한: 주문이 남아 있는 고객 1의 삭제를 FK가 차단한다.
+Source: bonus/04_evidence.sql
+
+SQL:
+-- EXPECT_ERROR: FOREIGN KEY constraint failed
+DELETE FROM customer WHERE customer_id = 1;
+RESULT:
+EXPECTED ERROR: FOREIGN KEY constraint failed

@@ -1,0 +1,15 @@
+E01 | 행 수 증명: 샘플 입력 직후 네 테이블의 COUNT(*)를 확인한다.
+Source: bonus/04_evidence.sql
+
+SQL:
+SELECT 'customer' AS table_name, COUNT(*) AS row_count FROM customer
+UNION ALL SELECT 'menu', COUNT(*) FROM menu
+UNION ALL SELECT 'cafe_order', COUNT(*) FROM cafe_order
+UNION ALL SELECT 'order_item', COUNT(*) FROM order_item;
+RESULT:
+table_name	row_count
+customer	12
+menu	12
+cafe_order	16
+order_item	32
+(4 rows)

@@ -5,6 +5,7 @@ PRAGMA foreign_keys = ON;
 BEGIN TRANSACTION;
 
 CREATE TABLE customer (
+    -- 고객 한 명의 식별자. 샘플은 ID를 수동 지정하며 별도 AUTOINCREMENT는 사용하지 않는다.
     customer_id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
     email TEXT NOT NULL UNIQUE,
@@ -12,6 +13,7 @@ CREATE TABLE customer (
 );
 
 CREATE TABLE menu (
+    -- 메뉴 한 종류의 식별자. 샘플은 ID를 수동 지정하며 별도 AUTOINCREMENT는 사용하지 않는다.
     menu_id INTEGER PRIMARY KEY,
     name TEXT NOT NULL UNIQUE,
     category TEXT NOT NULL CHECK (category IN ('coffee', 'tea', 'drink', 'bakery')),
@@ -21,6 +23,7 @@ CREATE TABLE menu (
 );
 
 CREATE TABLE cafe_order (
+    -- 주문 한 건의 식별자. 샘플은 ID를 수동 지정하며 별도 AUTOINCREMENT는 사용하지 않는다.
     order_id INTEGER PRIMARY KEY,
     customer_id INTEGER NOT NULL,
     ordered_at TEXT NOT NULL, -- ISO 8601 YYYY-MM-DD HH:MM:SS, 한국 현지 시각
@@ -29,6 +32,7 @@ CREATE TABLE cafe_order (
 );
 
 CREATE TABLE order_item (
+    -- 주문상세 한 행의 식별자. 샘플은 ID를 수동 지정하며 별도 AUTOINCREMENT는 사용하지 않는다.
     order_item_id INTEGER PRIMARY KEY,
     order_id INTEGER NOT NULL,
     menu_id INTEGER NOT NULL,

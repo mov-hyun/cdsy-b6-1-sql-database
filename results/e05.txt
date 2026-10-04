@@ -1,0 +1,16 @@
+E05 | LEFT JOIN 비교: 같은 조건에서 주문 없는 고객 11도 order_id=NULL로 남는다.
+Source: bonus/04_evidence.sql
+
+SQL:
+SELECT c.customer_id, c.name, o.order_id
+FROM customer AS c
+LEFT JOIN cafe_order AS o ON o.customer_id = c.customer_id
+WHERE c.customer_id IN (1, 11)
+ORDER BY c.customer_id, o.order_id;
+RESULT:
+customer_id	name	order_id
+1	고객01	1
+1	고객01	3
+1	고객01	13
+11	고객11	NULL
+(4 rows)

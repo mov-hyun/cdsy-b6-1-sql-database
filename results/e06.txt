@@ -1,0 +1,22 @@
+E06 | 집계 경계: 빈 입력의 COUNT=0, SUM/AVG=NULL이며 0은 집계에 포함된다.
+Source: bonus/04_evidence.sql
+
+SQL:
+SELECT COUNT(*) AS row_count, SUM(quantity) AS quantity_sum,
+       AVG(quantity) AS quantity_average,
+       COALESCE(SUM(quantity), 0) AS display_sum
+FROM order_item WHERE order_id = 999;
+RESULT:
+row_count	quantity_sum	quantity_average	display_sum
+0	NULL	NULL	0
+(1 rows)
+
+SQL:
+SELECT COUNT(*) AS all_rows, COUNT(value) AS nonnull_rows,
+       COUNT(DISTINCT value) AS distinct_nonnull_values,
+       SUM(value) AS value_sum, AVG(value) AS value_average
+FROM (SELECT 0 AS value UNION ALL SELECT 0 UNION ALL SELECT NULL) AS sample;
+RESULT:
+all_rows	nonnull_rows	distinct_nonnull_values	value_sum	value_average
+3	2	1	0	0.0
+(1 rows)

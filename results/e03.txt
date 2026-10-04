@@ -1,0 +1,9 @@
+E03 | PK 중복 제한: 이미 존재하는 customer_id=1의 재입력을 차단한다.
+Source: bonus/04_evidence.sql
+
+SQL:
+-- EXPECT_ERROR: UNIQUE constraint failed: customer.customer_id
+INSERT INTO customer (customer_id, name, email, joined_on)
+VALUES (1, '중복키실습', 'duplicate-key@example.com', '2026-10-04');
+RESULT:
+EXPECTED ERROR: UNIQUE constraint failed: customer.customer_id

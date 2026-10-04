@@ -32,7 +32,7 @@ def statements(sql):
 
 def sections(path):
     content = path.read_text(encoding='utf-8')
-    markers = list(re.finditer(r'^-- ([QBM]\d{2}) \| (.+)$', content, re.MULTILINE))
+    markers = list(re.finditer(r'^-- ([QBME]\d{2}) \| (.+)$', content, re.MULTILINE))
     if not markers:
         raise ValueError(f'{path.name}: 쿼리 번호가 없습니다.')
     yield None, '', content[:markers[0].start()]
@@ -155,8 +155,16 @@ def main():
                 '고객/주문시간 복합 인덱스 생성', checks)
 
         bonus = {}
-        for filename in ('01_join_subquery.sql', '02_integrity.sql', '03_report.sql'):
+        for filename in ('01_join_subquery.sql', '02_integrity.sql', '03_report.sql', '04_evidence.sql'):
             bonus.update(run_file(bonus_connection, ROOT / 'bonus' / filename, logs))
+        require(bonus['E01'][0] == [('customer', 12), ('menu', 12), ('cafe_order', 16), ('order_item', 32)],
+                'COUNT 출력으로 네 테이블 초기 행 수 증명', checks)
+        require(bonus['E04'][0] == [(1, '고객01', 1), (1, '고객01', 3), (1, '고객01', 13)],
+                'INNER JOIN 비교: 연결된 주문 3행', checks)
+        require(bonus['E05'][0] == bonus['E04'][0] + [(11, '고객11', None)],
+                'LEFT JOIN 비교: 주문 없는 고객도 NULL로 유지', checks)
+        require(bonus['E06'][0] == [(0, None, None, 0)], '빈 집계의 COUNT=0, SUM/AVG=NULL 확인', checks)
+        require(bonus['E06'][1] == [(3, 2, 1, 0, 0.0)], 'NULL 제외, 0 포함, DISTINCT 중복 제거 확인', checks)
         require(bonus['B01'][0] == bonus['B02'][0] and len(bonus['B01'][0]) == 9,
                 'JOIN과 EXISTS 결과 동일: 구매 고객 9명', checks)
         require(bonus['B04'][-1] == [(0,)], '정정 INSERT 성공 후 실습 주문 롤백', checks)
@@ -195,7 +203,7 @@ def main():
             'Engine: Python standard-library sqlite3 (local SQLite)\n'
             'Foreign keys: ON on every execution connection\n'
             'Core: fresh schema -> seed -> Q01 through Q16\n'
-            'Bonus: separate fresh schema -> seed -> B01 through B04 -> M01 through M03\n'
+            'Bonus: separate fresh schema -> seed -> B01 through B04 -> M01 through M03 -> E01 through E06\n'
             'Money: integer KRW; sample dates: 2026-09-01 through 2026-10-04\n'
             f'Initial row counts: {dict(zip(TABLES, (12, 12, 16, 32)))}\n'
             f'Final row counts: {dict(zip(TABLES, final_counts))}\n'
@@ -204,7 +212,7 @@ def main():
         (ROOT / 'results').mkdir(exist_ok=True)
         for filename, content in logs.items():
             (ROOT / 'results' / filename).write_text(content, encoding='utf-8')
-        print(f'PASS: {len(checks)} checks; 16 core/index sections; 7 bonus sections.')
+        print(f'PASS: {len(checks)} checks; 16 core/index sections; 13 bonus/evidence sections.')
         print('Saved data/cafe.db and results/*.txt')
     finally:
         connection.close()
