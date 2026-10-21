@@ -1,179 +1,155 @@
-# SQL 실행 결과 스크린샷
+# SQL 실제 터미널 실행 캡처
 
-핵심 Q01~Q16 및 보너스·보완 B01~B04, M01~M03, E01~E06의 실제 결과 문서를 캡처했다.
-생성 과정과 원본 해시는 [manifest.json](manifest.json)에 기록했다.
-스크린샷은 SQLite 실행 결과를 표시한 문서 화면이며 DB 관리 도구의 화면이 아니다.
+Windows Terminal에서 sqlite3.exe가 SQL을 실행하고 직접 출력한 화면 29장이다.
+기존 HTML 문서 캡처는 모두 교체했다. [실행·캡처 방식](../../docs/screenshots.md)과
+[실행 기록 및 PNG 해시](manifest.json)를 함께 제공한다.
 
-## B01
+텍스트 로그는 Python sqlite3로 별도 실행한 결과이며, 이미지는 독립 SQLite CLI 실행 화면이다.
 
-[원본 SQL·결과 텍스트](../b01.txt)
-
-![B01 SQL 실행 결과](b01.png)
-
-## B02
-
-[원본 SQL·결과 텍스트](../b02.txt)
-
-![B02 SQL 실행 결과](b02.png)
-
-## B03
-
-[원본 SQL·결과 텍스트](../b03.txt)
-
-![B03 SQL 실행 결과](b03.png)
-
-## B04
-
-[원본 SQL·결과 텍스트](../b04.txt)
-
-![B04 SQL 실행 결과](b04.png)
-
-## E01
-
-[원본 SQL·결과 텍스트](../e01.txt)
-
-![E01 SQL 실행 결과](e01.png)
-
-## E02
-
-[원본 SQL·결과 텍스트](../e02.txt)
-
-![E02 SQL 실행 결과](e02.png)
-
-## E03
-
-[원본 SQL·결과 텍스트](../e03.txt)
-
-![E03 SQL 실행 결과](e03.png)
-
-## E04
-
-[원본 SQL·결과 텍스트](../e04.txt)
-
-![E04 SQL 실행 결과](e04.png)
-
-## E05
-
-[원본 SQL·결과 텍스트](../e05.txt)
-
-![E05 SQL 실행 결과](e05.png)
-
-## E06
-
-[원본 SQL·결과 텍스트](../e06.txt)
-
-![E06 SQL 실행 결과](e06.png)
-
-## M01
-
-[원본 SQL·결과 텍스트](../m01.txt)
-
-![M01 SQL 실행 결과](m01.png)
-
-## M02
-
-[원본 SQL·결과 텍스트](../m02.txt)
-
-![M02 SQL 실행 결과](m02.png)
-
-## M03
-
-[원본 SQL·결과 텍스트](../m03.txt)
-
-![M03 SQL 실행 결과](m03.png)
+| 번호 | SQL 원본 | 별도 텍스트 결과 | 실제 터미널 PNG |
+|---|---|---|---|
+| Q01 | [sql/03_queries.sql](../../sql/03_queries.sql) | [q01.txt](../q01.txt) | [q01.png](q01.png) |
+| Q02 | [sql/03_queries.sql](../../sql/03_queries.sql) | [q02.txt](../q02.txt) | [q02.png](q02.png) |
+| Q03 | [sql/03_queries.sql](../../sql/03_queries.sql) | [q03.txt](../q03.txt) | [q03.png](q03.png) |
+| Q04 | [sql/03_queries.sql](../../sql/03_queries.sql) | [q04.txt](../q04.txt) | [q04.png](q04.png) |
+| Q05 | [sql/03_queries.sql](../../sql/03_queries.sql) | [q05.txt](../q05.txt) | [q05.png](q05.png) |
+| Q06 | [sql/03_queries.sql](../../sql/03_queries.sql) | [q06.txt](../q06.txt) | [q06.png](q06.png) |
+| Q07 | [sql/03_queries.sql](../../sql/03_queries.sql) | [q07.txt](../q07.txt) | [q07.png](q07.png) |
+| Q08 | [sql/03_queries.sql](../../sql/03_queries.sql) | [q08.txt](../q08.txt) | [q08.png](q08.png) |
+| Q09 | [sql/03_queries.sql](../../sql/03_queries.sql) | [q09.txt](../q09.txt) | [q09.png](q09.png) |
+| Q10 | [sql/03_queries.sql](../../sql/03_queries.sql) | [q10.txt](../q10.txt) | [q10.png](q10.png) |
+| Q11 | [sql/03_queries.sql](../../sql/03_queries.sql) | [q11.txt](../q11.txt) | [q11.png](q11.png) |
+| Q12 | [sql/03_queries.sql](../../sql/03_queries.sql) | [q12.txt](../q12.txt) | [q12.png](q12.png) |
+| Q13 | [sql/03_queries.sql](../../sql/03_queries.sql) | [q13.txt](../q13.txt) | [q13.png](q13.png) |
+| Q14 | [sql/03_queries.sql](../../sql/03_queries.sql) | [q14.txt](../q14.txt) | [q14.png](q14.png) |
+| Q15 | [sql/03_queries.sql](../../sql/03_queries.sql) | [q15.txt](../q15.txt) | [q15.png](q15.png) |
+| Q16 | [sql/03_queries.sql](../../sql/03_queries.sql) | [q16.txt](../q16.txt) | [q16.png](q16.png) |
+| B01 | [bonus/01_join_subquery.sql](../../bonus/01_join_subquery.sql) | [b01.txt](../b01.txt) | [b01.png](b01.png) |
+| B02 | [bonus/01_join_subquery.sql](../../bonus/01_join_subquery.sql) | [b02.txt](../b02.txt) | [b02.png](b02.png) |
+| B03 | [bonus/02_integrity.sql](../../bonus/02_integrity.sql) | [b03.txt](../b03.txt) | [b03.png](b03.png) |
+| B04 | [bonus/02_integrity.sql](../../bonus/02_integrity.sql) | [b04.txt](../b04.txt) | [b04.png](b04.png) |
+| M01 | [bonus/03_report.sql](../../bonus/03_report.sql) | [m01.txt](../m01.txt) | [m01.png](m01.png) |
+| M02 | [bonus/03_report.sql](../../bonus/03_report.sql) | [m02.txt](../m02.txt) | [m02.png](m02.png) |
+| M03 | [bonus/03_report.sql](../../bonus/03_report.sql) | [m03.txt](../m03.txt) | [m03.png](m03.png) |
+| E01 | [bonus/04_evidence.sql](../../bonus/04_evidence.sql) | [e01.txt](../e01.txt) | [e01.png](e01.png) |
+| E02 | [bonus/04_evidence.sql](../../bonus/04_evidence.sql) | [e02.txt](../e02.txt) | [e02.png](e02.png) |
+| E03 | [bonus/04_evidence.sql](../../bonus/04_evidence.sql) | [e03.txt](../e03.txt) | [e03.png](e03.png) |
+| E04 | [bonus/04_evidence.sql](../../bonus/04_evidence.sql) | [e04.txt](../e04.txt) | [e04.png](e04.png) |
+| E05 | [bonus/04_evidence.sql](../../bonus/04_evidence.sql) | [e05.txt](../e05.txt) | [e05.png](e05.png) |
+| E06 | [bonus/04_evidence.sql](../../bonus/04_evidence.sql) | [e06.txt](../e06.txt) | [e06.png](e06.png) |
 
 ## Q01
 
-[원본 SQL·결과 텍스트](../q01.txt)
-
-![Q01 SQL 실행 결과](q01.png)
+![Q01 실제 SQLite 터미널 실행](q01.png)
 
 ## Q02
 
-[원본 SQL·결과 텍스트](../q02.txt)
-
-![Q02 SQL 실행 결과](q02.png)
+![Q02 실제 SQLite 터미널 실행](q02.png)
 
 ## Q03
 
-[원본 SQL·결과 텍스트](../q03.txt)
-
-![Q03 SQL 실행 결과](q03.png)
+![Q03 실제 SQLite 터미널 실행](q03.png)
 
 ## Q04
 
-[원본 SQL·결과 텍스트](../q04.txt)
-
-![Q04 SQL 실행 결과](q04.png)
+![Q04 실제 SQLite 터미널 실행](q04.png)
 
 ## Q05
 
-[원본 SQL·결과 텍스트](../q05.txt)
-
-![Q05 SQL 실행 결과](q05.png)
+![Q05 실제 SQLite 터미널 실행](q05.png)
 
 ## Q06
 
-[원본 SQL·결과 텍스트](../q06.txt)
-
-![Q06 SQL 실행 결과](q06.png)
+![Q06 실제 SQLite 터미널 실행](q06.png)
 
 ## Q07
 
-[원본 SQL·결과 텍스트](../q07.txt)
-
-![Q07 SQL 실행 결과](q07.png)
+![Q07 실제 SQLite 터미널 실행](q07.png)
 
 ## Q08
 
-[원본 SQL·결과 텍스트](../q08.txt)
-
-![Q08 SQL 실행 결과](q08.png)
+![Q08 실제 SQLite 터미널 실행](q08.png)
 
 ## Q09
 
-[원본 SQL·결과 텍스트](../q09.txt)
-
-![Q09 SQL 실행 결과](q09.png)
+![Q09 실제 SQLite 터미널 실행](q09.png)
 
 ## Q10
 
-[원본 SQL·결과 텍스트](../q10.txt)
-
-![Q10 SQL 실행 결과](q10.png)
+![Q10 실제 SQLite 터미널 실행](q10.png)
 
 ## Q11
 
-[원본 SQL·결과 텍스트](../q11.txt)
-
-![Q11 SQL 실행 결과](q11.png)
+![Q11 실제 SQLite 터미널 실행](q11.png)
 
 ## Q12
 
-[원본 SQL·결과 텍스트](../q12.txt)
-
-![Q12 SQL 실행 결과](q12.png)
+![Q12 실제 SQLite 터미널 실행](q12.png)
 
 ## Q13
 
-[원본 SQL·결과 텍스트](../q13.txt)
-
-![Q13 SQL 실행 결과](q13.png)
+![Q13 실제 SQLite 터미널 실행](q13.png)
 
 ## Q14
 
-[원본 SQL·결과 텍스트](../q14.txt)
-
-![Q14 SQL 실행 결과](q14.png)
+![Q14 실제 SQLite 터미널 실행](q14.png)
 
 ## Q15
 
-[원본 SQL·결과 텍스트](../q15.txt)
-
-![Q15 SQL 실행 결과](q15.png)
+![Q15 실제 SQLite 터미널 실행](q15.png)
 
 ## Q16
 
-[원본 SQL·결과 텍스트](../q16.txt)
+![Q16 실제 SQLite 터미널 실행](q16.png)
 
-![Q16 SQL 실행 결과](q16.png)
+## B01
+
+![B01 실제 SQLite 터미널 실행](b01.png)
+
+## B02
+
+![B02 실제 SQLite 터미널 실행](b02.png)
+
+## B03
+
+![B03 실제 SQLite 터미널 실행](b03.png)
+
+## B04
+
+![B04 실제 SQLite 터미널 실행](b04.png)
+
+## M01
+
+![M01 실제 SQLite 터미널 실행](m01.png)
+
+## M02
+
+![M02 실제 SQLite 터미널 실행](m02.png)
+
+## M03
+
+![M03 실제 SQLite 터미널 실행](m03.png)
+
+## E01
+
+![E01 실제 SQLite 터미널 실행](e01.png)
+
+## E02
+
+![E02 실제 SQLite 터미널 실행](e02.png)
+
+## E03
+
+![E03 실제 SQLite 터미널 실행](e03.png)
+
+## E04
+
+![E04 실제 SQLite 터미널 실행](e04.png)
+
+## E05
+
+![E05 실제 SQLite 터미널 실행](e05.png)
+
+## E06
+
+![E06 실제 SQLite 터미널 실행](e06.png)

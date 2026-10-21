@@ -6,5 +6,7 @@ __pycache__/
 .venv/
 .DS_Store
 Thumbs.db
-# 캡처 중간 HTML/브라우저 산출물. 제출용 PNG는 results/screenshots에 둔다.
+# 로컬 실습 도구·캡처 제어 파일은 제출하지 않는다.
 output/playwright/
+output/terminal-tools/
+output/terminal-control*/

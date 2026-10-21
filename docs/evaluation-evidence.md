@@ -18,7 +18,7 @@
 | #2 FK·1:N | 없는 부모 입력 및 참조 중인 부모 삭제 실패 | [B03 로그](../results/b03.txt), [B03 PNG](../results/screenshots/b03.png), [E02 PNG](../results/screenshots/e02.png) |
 | #3 데이터 행 수 | customer 12, menu 12, cafe_order 16, order_item 32 | [COUNT SQL](../bonus/04_evidence.sql), [E01 로그](../results/e01.txt), [E01 PNG](../results/screenshots/e01.png) |
 | #4 쿼리 종류 | 기본4·조인4·집계3·서브쿼리2·수정1·삭제1 + 인덱스1 | [README 쿼리 구성과 실행 증거](../README.md#쿼리-구성과-실행-증거) |
-| #5 실행 스크린샷 | Q01~Q16 전부 PNG 첨부, 원본 텍스트와 대응 | [스크린샷 전체 목록](../results/screenshots/README.md), [캡처 방식](screenshots.md) |
+| #5 실행 스크린샷 | Q01~Q16 실제 SQLite CLI 터미널 PNG 첨부, SQL·별도 텍스트 결과와 대응 | [스크린샷 전체 목록](../results/screenshots/README.md), [캡처 방식](screenshots.md) |
 | #6 테이블 분리·정규화 | 1NF/2NF/3NF와 실제 테이블 분리 이유 연결 | [설계 설명](design.md#왜-네-테이블로-나누었나) |
 | #7 관계 시나리오 | 고객→주문, 주문→상세, 메뉴→상세의 생성·수정·삭제 예시 | [키와 제약조건](design.md#키와-제약조건) |
 | #8 타입 | SQLite TEXT 날짜와 DATE/DATETIME/TIMESTAMP 비교 | [재현과 SQLite 문법](design.md#재현과-sqlite-문법) |
@@ -33,7 +33,8 @@
 ## 원문 요구사항과 사전평가의 차이
 
 사용자가 제공한 과제 원문에는 결과 확인을 “스크린샷 또는 결과 텍스트”로 남길 수 있다고 되어 있다.
-기존 제출물은 results/*.txt로 실행 결과를 제공했다. 이번 보완에서는 평가표 #5가 요청한 이미지도 추가했다.
+기존 제출물은 results/*.txt로 실행 결과를 제공했다. 이후 추가한 HTML 문서 캡처는 실제 터미널 실행 화면이 아니었다.
+2026-10-21에 해당 이미지 29장을 모두 실제 SQLite CLI 터미널 캡처로 교체하고 HTML 생성기를 삭제했다.
 README의 쿼리 유형 매핑, B03의 FK 실패 로그, Q16의 실행계획도 최초 제출물에 포함되어 있었으며,
 이번에는 위 표에서 직접 연결해 확인 경로를 짧게 했다.
 
@@ -41,5 +42,5 @@ README의 쿼리 유형 매핑, B03의 FK 실패 로그, Q16의 실행계획도 
 
 - [verification.txt](../results/verification.txt): 실제 실행 검증 47개 통과.
 - 핵심·인덱스 16개, 보너스·보완 13개: SQL/실제 결과/PNG가 각각 대응.
-- 이미지의 원본 텍스트 해시와 브라우저 버전: [manifest.json](../results/screenshots/manifest.json).
-- 생성 DB는 `data/cafe.db`이며 기존 SQL 재실행으로 재현할 수 있다.
+- 실제 터미널 PNG 해시·SQL 섹션 해시·CLI 입력·종료 코드·SQLite 버전: [manifest.json](../results/screenshots/manifest.json).
+- 텍스트 실행의 DB는 `data/cafe.db`다. 캡처 실행은 별도 임시 DB 두 개를 만들고 종료 후 정리하며, 두 경로 모두 제출 SQL로 재현한다.

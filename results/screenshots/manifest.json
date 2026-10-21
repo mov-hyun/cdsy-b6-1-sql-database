@@ -1,210 +1,564 @@
 {
-  "engine": "Python 3.12.14 · SQLite 3.53.1",
-  "browser": "Microsoft Edge 154.0.4258.53",
-  "method": "Actual SQLite execution -> unchanged result text -> browser document -> Playwright screenshot",
+  "method": "Native sqlite3.exe inherits Windows Terminal stdout/stderr; Pillow ImageGrab captures visible terminal screen bounds. No HTML, log replay, or pixel editing.",
+  "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+  "text_results_environment": "results/00_environment.txt (separate Python sqlite3 execution)",
+  "final_core_counts": [
+    "customer|11",
+    "menu|12",
+    "cafe_order|16",
+    "order_item|32"
+  ],
   "captures": [
     {
-      "source": "results/b01.txt",
-      "source_sha256_lf": "ae804cb5153d693449430f166b5c8324d6024c3781d8204db95d6cf086d26df5",
-      "screenshot": "results/screenshots/b01.png",
-      "width": 1440,
-      "height": 1130
-    },
-    {
-      "source": "results/b02.txt",
-      "source_sha256_lf": "0046dfa1917be46837566277bda2a848199ff4e9fb7e7880f339f82336147284",
-      "screenshot": "results/screenshots/b02.png",
-      "width": 1440,
-      "height": 1183
-    },
-    {
-      "source": "results/b03.txt",
-      "source_sha256_lf": "f346f576d55e42b7d6e1e4127ee8f857bfab5260609ca51324b2579a514072a8",
-      "screenshot": "results/screenshots/b03.png",
-      "width": 1440,
-      "height": 1000
-    },
-    {
-      "source": "results/b04.txt",
-      "source_sha256_lf": "0aa20c4d406f1f9a907de74c3239926a004b0692927d231bbf475644515fcdfd",
-      "screenshot": "results/screenshots/b04.png",
-      "width": 1440,
-      "height": 1767
-    },
-    {
-      "source": "results/e01.txt",
-      "source_sha256_lf": "5d76b53974d2900f36096050ea89434bc3be1c5b5df710b19e28b190f234033c",
-      "screenshot": "results/screenshots/e01.png",
-      "width": 1440,
-      "height": 1000
-    },
-    {
-      "source": "results/e02.txt",
-      "source_sha256_lf": "dd3f64aea4d7f52a00de751d504036cf0536169f529196eeaff60b180381e71b",
-      "screenshot": "results/screenshots/e02.png",
-      "width": 1440,
-      "height": 1000
-    },
-    {
-      "source": "results/e03.txt",
-      "source_sha256_lf": "20bd68063b7a6d7765e5840b113d7020779f695e148bbdb05b8ad9e1dc55d497",
-      "screenshot": "results/screenshots/e03.png",
-      "width": 1440,
-      "height": 1000
-    },
-    {
-      "source": "results/e04.txt",
-      "source_sha256_lf": "539a9c0dc23d393f10f4b8dad9c7af0ee14cd06550da75cd9d61f7958bdf753c",
-      "screenshot": "results/screenshots/e04.png",
-      "width": 1440,
-      "height": 1000
-    },
-    {
-      "source": "results/e05.txt",
-      "source_sha256_lf": "3a3cbb7bffbfcdfb4cdcfe8fa4a18916259cdc551c0de9dcc0e0e37d21176cf7",
-      "screenshot": "results/screenshots/e05.png",
-      "width": 1440,
-      "height": 1000
-    },
-    {
-      "source": "results/e06.txt",
-      "source_sha256_lf": "6996d220276ee38a8342f1f3be3cf618735ab36a7356c49e25664ff16e45782a",
-      "screenshot": "results/screenshots/e06.png",
-      "width": 1440,
-      "height": 1159
-    },
-    {
-      "source": "results/m01.txt",
-      "source_sha256_lf": "8b33199cc359ff34d7437603c1191bab1f3930f6b941e5214800613eb8171613",
-      "screenshot": "results/screenshots/m01.png",
-      "width": 1440,
-      "height": 1000
-    },
-    {
-      "source": "results/m02.txt",
-      "source_sha256_lf": "55550815cfa8c8598db60848114e94945c7f0aecb634458855cb7675d7933dd8",
-      "screenshot": "results/screenshots/m02.png",
-      "width": 1440,
-      "height": 1068
-    },
-    {
-      "source": "results/m03.txt",
-      "source_sha256_lf": "abee28b910f9f276585c734dac6dba95b25512e9ba40bef81cf565d3727e90ad",
-      "screenshot": "results/screenshots/m03.png",
-      "width": 1440,
-      "height": 1000
-    },
-    {
-      "source": "results/q01.txt",
-      "source_sha256_lf": "f046ef6e390040f867bddf363bab3c621aa919da5291e2e3683dc6c421befcf6",
+      "id": "Q01",
       "screenshot": "results/screenshots/q01.png",
-      "width": 1440,
-      "height": 1000
+      "png_sha256": "a73f8888f724e8bed78aa4f5510c69f7e90ca361c89ab46a21f0d03dae002650",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:45:16+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "Q01",
+        "source": "sql/03_queries.sql",
+        "section_sha256_lf": "b333385be72f251056caacdd52ddb8a5469d9a00e216d5fff7fc9a6ba1b44494",
+        "cli_input_sha256": "4f7c04c7de3c2f074d4f7da2ed816cf6552ff9534dc563f58a9eddc2b9634f88",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT menu_id, name, price\nFROM menu\nWHERE category = 'coffee' AND is_available = 1\nORDER BY price, menu_id;\n",
+        "database": "core.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
     },
     {
-      "source": "results/q02.txt",
-      "source_sha256_lf": "1f6c175fc22e920071891d2ffdcc663a2684af063b35fa81d77d749384abc470",
+      "id": "Q02",
       "screenshot": "results/screenshots/q02.png",
-      "width": 1440,
-      "height": 1000
+      "png_sha256": "c5705cb7436dc35bd2ad0c64b107210d3d76991dcb2a274e8e316de2f3d0214a",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:45:17+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "Q02",
+        "source": "sql/03_queries.sql",
+        "section_sha256_lf": "b58ab86e9ebc0e7551d6695afdb38e7e640cbd2605506740af8fb9eb024ec083",
+        "cli_input_sha256": "e876113f60fa7aa1d317005d0c128312bcc39afc2a3dee7580cce97b0e1526e6",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT customer_id, name, joined_on\nFROM customer\nWHERE joined_on >= '2026-09-01' AND joined_on < '2026-10-01'\nORDER BY joined_on DESC, customer_id;\n",
+        "database": "core.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
     },
     {
-      "source": "results/q03.txt",
-      "source_sha256_lf": "f0ac50c99e064666ccddfbec96358ab744dce2a918449fad78e781a25682c2e4",
+      "id": "Q03",
       "screenshot": "results/screenshots/q03.png",
-      "width": 1440,
-      "height": 1000
+      "png_sha256": "c8ada4d0069783f6fe11dcb5346f3f46a6f190d32e3302cb26a45037a159faf6",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:45:18+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "Q03",
+        "source": "sql/03_queries.sql",
+        "section_sha256_lf": "bd0abe66c5e7f8a4fa3291c0b902f77bd16b7ee1352e80f807a6fa28fa15f5c3",
+        "cli_input_sha256": "881d60bbc468db227236b38d669afb3c19bbb0e30f69d038f59275bf93234eaf",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT order_id, customer_id, ordered_at\nFROM cafe_order\nWHERE status = 'completed'\nORDER BY ordered_at DESC, order_id DESC\nLIMIT 5;\n",
+        "database": "core.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
     },
     {
-      "source": "results/q04.txt",
-      "source_sha256_lf": "76c6c8b0d67522433e36c554855563b54f7d76082d7416469aa45faf86df506e",
+      "id": "Q04",
       "screenshot": "results/screenshots/q04.png",
-      "width": 1440,
-      "height": 1000
+      "png_sha256": "f7b394a0eec0b140aeaf2782cfdd348686dcfba2030e0a961428cc1257358025",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:45:18+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "Q04",
+        "source": "sql/03_queries.sql",
+        "section_sha256_lf": "5ba826d5fd845a99026808a456f1eaa72f763d99b36ac38f683eb6b5461c86f7",
+        "cli_input_sha256": "c5b6e1f947cd049bab1e383b2b51d54fed71b92fb92543380617061e32198bd8",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT menu_id, name, price\nFROM menu\nWHERE name LIKE '%라테%'\nORDER BY menu_id;\n",
+        "database": "core.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
     },
     {
-      "source": "results/q05.txt",
-      "source_sha256_lf": "f20fa5a3d01d603cd738eb31ecfc8805a1b0cb4367af05ebaf64b66ad845be14",
+      "id": "Q05",
       "screenshot": "results/screenshots/q05.png",
-      "width": 1440,
-      "height": 1398
+      "png_sha256": "c29c10faf0edd14e8c7cc53bf2bdb7826d379c35bf270c135e9671bbbf55fdc3",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:45:19+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "Q05",
+        "source": "sql/03_queries.sql",
+        "section_sha256_lf": "9e1923f1e09dc0a619e06c1a05a72b33078629146d34ed7b545cca13df61f3fa",
+        "cli_input_sha256": "ae4979cf192fc1af6bea396f5658c10b768722f929d3493d7e73a3d2368bf380",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT o.order_id, c.name AS customer_name, o.ordered_at, o.status\nFROM cafe_order AS o\nINNER JOIN customer AS c ON c.customer_id = o.customer_id\nORDER BY o.order_id;\n",
+        "database": "core.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
     },
     {
-      "source": "results/q06.txt",
-      "source_sha256_lf": "6cfa1deae20b9088dea5fef582efbf706e8bf7a87c867c0e09280182166b3e2e",
+      "id": "Q06",
       "screenshot": "results/screenshots/q06.png",
-      "width": 1440,
-      "height": 1000
+      "png_sha256": "96e25977c7e657370f30488ccdfebf5acb355cf5ee40d3ed47d4ff61d3bda593",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:45:34+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "Q06",
+        "source": "sql/03_queries.sql",
+        "section_sha256_lf": "ae7dfcfdf8352744b38f93fed892c2da3dee81ddb1f08b58b0bb098b86bc8879",
+        "cli_input_sha256": "0f6da414dc24c8945ff5bb8ce8951e2263d304bf1930923e57c3b8bd9a6528ac",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT i.order_item_id, m.name AS menu_name, i.quantity, i.unit_price,\n       i.quantity * i.unit_price AS line_amount\nFROM order_item AS i\nINNER JOIN menu AS m ON m.menu_id = i.menu_id\nWHERE i.order_id = 1\nORDER BY i.order_item_id;\n",
+        "database": "core.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
     },
     {
-      "source": "results/q07.txt",
-      "source_sha256_lf": "be0d8183cd8204aa70bcb2e1bae84a406d3dec2f6c8c5b17051d50bc00bca1e8",
+      "id": "Q07",
       "screenshot": "results/screenshots/q07.png",
-      "width": 1440,
-      "height": 1000
+      "png_sha256": "83afc424fb7a2ecf406a99129383f2b0989c4e7f559a5bb530da68a6481cf72b",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:45:35+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "Q07",
+        "source": "sql/03_queries.sql",
+        "section_sha256_lf": "3cabab8ad1a396895b385dd4f1ac83f13b3da05f5abadcacc6d1dfdc54088727",
+        "cli_input_sha256": "749a768a13fca175c82ac98358bab4b2d2e56944ed38e9a593778e10e77bc69f",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT c.customer_id, c.name\nFROM customer AS c\nLEFT JOIN cafe_order AS o ON o.customer_id = c.customer_id\nWHERE o.order_id IS NULL\nORDER BY c.customer_id;\n",
+        "database": "core.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
     },
     {
-      "source": "results/q08.txt",
-      "source_sha256_lf": "7d5521e530cc3d5b5376534c434df821c614dcb83194d6c5446e06ab90c30c58",
+      "id": "Q08",
       "screenshot": "results/screenshots/q08.png",
-      "width": 1440,
-      "height": 1220
+      "png_sha256": "7653bcc57dbcd1ae7a4ae18f044d53be59cea0527b67ebe3d2d254c6b1aa9223",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:45:36+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "Q08",
+        "source": "sql/03_queries.sql",
+        "section_sha256_lf": "7916461ea06b9c4007416be5441460589986147d4a764ec2120ac28d8fd9974e",
+        "cli_input_sha256": "10bd6d5606cb6a5bbd5550b26960b625d00fc6231e06b6ef1841b40bf97055b4",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT o.order_id, c.name AS customer_name, m.name AS menu_name,\n       i.quantity, i.quantity * i.unit_price AS line_amount\nFROM cafe_order AS o\nINNER JOIN customer AS c ON c.customer_id = o.customer_id\nINNER JOIN order_item AS i ON i.order_id = o.order_id\nINNER JOIN menu AS m ON m.menu_id = i.menu_id\nWHERE o.status = 'completed'\n  AND o.ordered_at >= '2026-10-01 00:00:00'\n  AND o.ordered_at < '2026-11-01 00:00:00'\nORDER BY o.order_id, i.order_item_id;\n",
+        "database": "core.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
     },
     {
-      "source": "results/q09.txt",
-      "source_sha256_lf": "754e61a4f828da2c58fa33d47282e381c4d3adb4eedff415b337c4c9e8c96604",
+      "id": "Q09",
       "screenshot": "results/screenshots/q09.png",
-      "width": 1440,
-      "height": 1283
+      "png_sha256": "94a267c2814274703ae2faf911c9b394d07c7e9164b43cc89a9e679c7a37fc25",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:45:37+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "Q09",
+        "source": "sql/03_queries.sql",
+        "section_sha256_lf": "22c61f2f4d50ca044d2954199ca6423aeb554a1a599f6f24eebcd5c8b84441b1",
+        "cli_input_sha256": "9431ddb393887f497d97be56c9f96eafa67758d97c159365dfb94aa445ee0516",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT c.customer_id, c.name, COUNT(o.order_id) AS completed_order_count\nFROM customer AS c\nLEFT JOIN cafe_order AS o\n    ON o.customer_id = c.customer_id AND o.status = 'completed'\nGROUP BY c.customer_id, c.name\nORDER BY completed_order_count DESC, c.customer_id;\n",
+        "database": "core.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
     },
     {
-      "source": "results/q10.txt",
-      "source_sha256_lf": "180513c8d76aa4f99cf93b3df096bf97d8dcc44237c2cbbf5f22eb8c32465bda",
+      "id": "Q10",
       "screenshot": "results/screenshots/q10.png",
-      "width": 1440,
-      "height": 1252
+      "png_sha256": "3b6b5cdd3b1f1a502da9d22fc6eb1b34e9e28a09760e1d218033b13055995c09",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:45:38+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "Q10",
+        "source": "sql/03_queries.sql",
+        "section_sha256_lf": "4b0774eb682972abe9ddf02ac315f4a1c836d32d01aa0e9ff5711f56f4ec39ab",
+        "cli_input_sha256": "9cb116950a91705bd9f3d1323cb03fb313a8fda9b0bd522b7ba70f8c2761d1a8",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT m.menu_id, m.name, SUM(i.quantity) AS sold_quantity,\n       SUM(i.quantity * i.unit_price) AS sales_amount\nFROM menu AS m\nINNER JOIN order_item AS i ON i.menu_id = m.menu_id\nINNER JOIN cafe_order AS o ON o.order_id = i.order_id\nWHERE o.status = 'completed'\nGROUP BY m.menu_id, m.name\nORDER BY sold_quantity DESC, m.menu_id;\n",
+        "database": "core.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
     },
     {
-      "source": "results/q11.txt",
-      "source_sha256_lf": "505dcdd633542c0dfec5f990ee117f08e65b4294d1fae2948c31f4c523bb36b8",
+      "id": "Q11",
       "screenshot": "results/screenshots/q11.png",
-      "width": 1440,
-      "height": 1342
+      "png_sha256": "57b9350450310f6cc6b0c4f5c558ff54f618652abe3c618fc1165ae9c12dec21",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:45:38+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "Q11",
+        "source": "sql/03_queries.sql",
+        "section_sha256_lf": "fb174e2281bb51e516cd598a77d4786a133d86e2d375a338f2606601d41d248b",
+        "cli_input_sha256": "1f6d723ff8dea2ec223824ca91d8a0d9e493588bd43fae698b3cd44abf667563",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT c.customer_id, c.name, COUNT(*) AS completed_order_count,\n       ROUND(AVG(t.order_amount), 2) AS average_order_amount\nFROM customer AS c\nINNER JOIN (\n    SELECT o.order_id, o.customer_id,\n           SUM(i.quantity * i.unit_price) AS order_amount\n    FROM cafe_order AS o\n    INNER JOIN order_item AS i ON i.order_id = o.order_id\n    WHERE o.status = 'completed'\n    GROUP BY o.order_id, o.customer_id\n) AS t ON t.customer_id = c.customer_id\nGROUP BY c.customer_id, c.name\nORDER BY c.customer_id;\n",
+        "database": "core.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
     },
     {
-      "source": "results/q12.txt",
-      "source_sha256_lf": "21e82a311b04370dcb046e08163c98352259c50c47de3c514b939c4394a25a97",
+      "id": "Q12",
       "screenshot": "results/screenshots/q12.png",
-      "width": 1440,
-      "height": 1000
+      "png_sha256": "fc5958df403dfd6909151d340ec0798292e104e494760bc9e86afb6a1be60695",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:45:49+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "Q12",
+        "source": "sql/03_queries.sql",
+        "section_sha256_lf": "29058f7743dae2d1d650594d5b0f3baec2347ee3d59176c0bb38f393b64b0089",
+        "cli_input_sha256": "b193b41713558c8f167923e396d96d3030091523afc1321183e74177a4406cf3",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT menu_id, name, price\nFROM menu\nWHERE is_available = 1\n  AND price > (SELECT AVG(price) FROM menu WHERE is_available = 1)\nORDER BY price DESC, menu_id;\n",
+        "database": "core.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
     },
     {
-      "source": "results/q13.txt",
-      "source_sha256_lf": "2f2e5e7f79629bef36e04fe5b2f5eaa9dec747a4b1b1f2d4f660aa71a64793c0",
+      "id": "Q13",
       "screenshot": "results/screenshots/q13.png",
-      "width": 1440,
-      "height": 1000
+      "png_sha256": "cf73336b2b5d36430f98077df0ff747f12f4a86e41190d9f74985f47ef95582f",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:45:50+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "Q13",
+        "source": "sql/03_queries.sql",
+        "section_sha256_lf": "41136e5f2b30428af1bc2aabe88d5d70cfb079298ce7a08052f8e8666f101983",
+        "cli_input_sha256": "fb6f2d808eb511d95c134e38ad70b339e61b710cb671272ec272eb2e308af6b0",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT m.menu_id, m.name\nFROM menu AS m\nWHERE NOT EXISTS (\n    SELECT 1\n    FROM order_item AS i\n    INNER JOIN cafe_order AS o ON o.order_id = i.order_id\n    WHERE i.menu_id = m.menu_id AND o.status = 'completed'\n)\nORDER BY m.menu_id;\n",
+        "database": "core.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
     },
     {
-      "source": "results/q14.txt",
-      "source_sha256_lf": "9d5a8691e2d85921a4d9e2cc02b8fb8c115f0c6d237e9dd66169a97ec34f0c1e",
+      "id": "Q14",
       "screenshot": "results/screenshots/q14.png",
-      "width": 1440,
-      "height": 1974
+      "png_sha256": "2ff1b5e085c28ffd537fa70df172c6538a828f453d8073836f04d004ab3e2d78",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:45:51+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "Q14",
+        "source": "sql/03_queries.sql",
+        "section_sha256_lf": "94f5b72b4dbe08a3f69e5ef53e122c55fa9b7f5c30e321798bccb20d3dc8e8b1",
+        "cli_input_sha256": "51ac485fb808428ec4f3e8e73bd51eab49dcb8fb2ca25750ba3824011b4368af",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT menu_id, name, price FROM menu WHERE menu_id = 1;\nUPDATE menu SET price = 3200 WHERE menu_id = 1;\nSELECT changes() AS updated_rows; -- SQLite 전용: 직전 DML의 변경 행 수\nSELECT menu_id, name, price FROM menu WHERE menu_id = 1;\nSELECT order_item_id, order_id, unit_price\nFROM order_item WHERE menu_id = 1 ORDER BY order_item_id;\n",
+        "database": "core.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
     },
     {
-      "source": "results/q15.txt",
-      "source_sha256_lf": "fbd108a085b3a923d16d1bbf0af45a6efdc39b453e0b12d6b3fec816eca87c63",
+      "id": "Q15",
       "screenshot": "results/screenshots/q15.png",
-      "width": 1440,
-      "height": 1866
+      "png_sha256": "5a92f980bcd66427006b1039e4f3978c77bb92388f1c3c1efaefeb783f32640a",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:45:51+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "Q15",
+        "source": "sql/03_queries.sql",
+        "section_sha256_lf": "68f8f396ecc40f46e0993c04ce6cb2313b42088ec1764c2f1784499926153a27",
+        "cli_input_sha256": "f223b749ad6b9861d5edb59307d286cc1a43a1b1a6c52fe898a55f639399f159",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT customer_id, name FROM customer WHERE customer_id = 12;\nDELETE FROM customer\nWHERE customer_id = 12\n  AND NOT EXISTS (SELECT 1 FROM cafe_order WHERE customer_id = 12);\nSELECT changes() AS deleted_rows; -- SQLite 전용\nSELECT customer_id, name FROM customer WHERE customer_id = 12;\nSELECT COUNT(*) AS remaining_customers FROM customer;\n",
+        "database": "core.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
     },
     {
-      "source": "results/q16.txt",
-      "source_sha256_lf": "11f4fdbdee80698ed147c514bdd08327a4c9d86960c3f366d00e48190930240d",
+      "id": "Q16",
       "screenshot": "results/screenshots/q16.png",
-      "width": 1440,
-      "height": 1846
+      "png_sha256": "66d7e56e2fa469d77e909a323f1413d7e687ff007d9f1b12f624a06a731afa8f",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:45:52+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "Q16",
+        "source": "sql/03_queries.sql",
+        "section_sha256_lf": "5d6d13e5a562718653fd63ab6f2718d222a63e2cd20cee1d66e1bed173d73a9f",
+        "cli_input_sha256": "7f5d7184e4c3a16749562d081ea9404d382f10a347cf36d35c7bec78eac481aa",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\n-- SQLite 전용 EXPLAIN QUERY PLAN으로 전후 접근 방식을 확인하며 속도 향상을 단정하지 않는다.\nEXPLAIN QUERY PLAN\nSELECT order_id, ordered_at FROM cafe_order\nWHERE customer_id = 1 ORDER BY ordered_at;\nCREATE INDEX idx_cafe_order_customer_time ON cafe_order(customer_id, ordered_at);\nEXPLAIN QUERY PLAN\nSELECT order_id, ordered_at FROM cafe_order\nWHERE customer_id = 1 ORDER BY ordered_at;\nSELECT order_id, ordered_at FROM cafe_order\nWHERE customer_id = 1 ORDER BY ordered_at;\n",
+        "database": "core.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
+    },
+    {
+      "id": "B01",
+      "screenshot": "results/screenshots/b01.png",
+      "png_sha256": "49d0729a53b1a938c2d2e410d97ce406857b6491eb70e6e463dc37c10ddaa1c2",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:47:56+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "B01",
+        "source": "bonus/01_join_subquery.sql",
+        "section_sha256_lf": "e5962d7ee7e5500040e618c4b270f73242afc1393a6311d0a56dbfac9d0b2e71",
+        "cli_input_sha256": "5be3ced0f04f315b868a04c048511ab2c4e0c61296eedfee54794a3210e020fb",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT DISTINCT c.customer_id, c.name\nFROM customer AS c\nINNER JOIN cafe_order AS o ON o.customer_id = c.customer_id\nWHERE o.status = 'completed'\nORDER BY c.customer_id;\n",
+        "database": "bonus.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
+    },
+    {
+      "id": "B02",
+      "screenshot": "results/screenshots/b02.png",
+      "png_sha256": "ad06341adcffc76b629f86f6486ba83f86ef9c86f1ee76f7ff9d45fd1480a312",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:47:57+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "B02",
+        "source": "bonus/01_join_subquery.sql",
+        "section_sha256_lf": "a8270fd5ecd45118652aaf48c7c67205d020e714e69553ae82f83ad4c8e3cc81",
+        "cli_input_sha256": "aad9149e5ca28be90978c9d621fdf9d80174f334a1686808137d9ee4b0e1b88b",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT c.customer_id, c.name\nFROM customer AS c\nWHERE EXISTS (\n    SELECT 1 FROM cafe_order AS o\n    WHERE o.customer_id = c.customer_id AND o.status = 'completed'\n)\nORDER BY c.customer_id;\n",
+        "database": "bonus.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
+    },
+    {
+      "id": "B03",
+      "screenshot": "results/screenshots/b03.png",
+      "png_sha256": "1f4b90c071c8ec9b0fd38507f47087cf27669073d52778825cd4d6041aba225f",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:47:57+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "B03",
+        "source": "bonus/02_integrity.sql",
+        "section_sha256_lf": "6564bc1d90792fbf23a04da0d2f973bbfe41dd05095a5bf186fc0f21257024c2",
+        "cli_input_sha256": "c150b889594c52f55665c3037be995f62f4203b7c0dbb5bd8c7e0fd68ccb218f",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\n-- EXPECT_ERROR: FOREIGN KEY constraint failed\nINSERT INTO cafe_order (order_id, customer_id, ordered_at, status)\nVALUES (99, 999, '2026-10-04 12:00:00', 'placed');\n",
+        "database": "bonus.db",
+        "exit_code": 1,
+        "expected_error": "FOREIGN KEY constraint failed"
+      }
+    },
+    {
+      "id": "B04",
+      "screenshot": "results/screenshots/b04.png",
+      "png_sha256": "c558be712009d20deeb2a16927dfc97bf2cea13c21305b74248b31a77e0e2593",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:47:58+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "B04",
+        "source": "bonus/02_integrity.sql",
+        "section_sha256_lf": "1e3b4c5790cb5c48021123ea02da272edbb69e482b456462e65a89baab695d41",
+        "cli_input_sha256": "d061e661613ad21e7c5bce3b1e129fedb4389d771dc53224ec71866a3f052ee7",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nBEGIN TRANSACTION;\nINSERT INTO cafe_order (order_id, customer_id, ordered_at, status)\nVALUES (99, 1, '2026-10-04 12:00:00', 'placed');\nSELECT order_id, customer_id, status FROM cafe_order WHERE order_id = 99;\nROLLBACK;\nSELECT COUNT(*) AS remaining_practice_orders FROM cafe_order WHERE order_id = 99;\n",
+        "database": "bonus.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
+    },
+    {
+      "id": "M01",
+      "screenshot": "results/screenshots/m01.png",
+      "png_sha256": "7d64570f784fcd748b8025c7a80367cdf3dddc2b8304f49d39d241b9ea9e5326",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:47:59+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "M01",
+        "source": "bonus/03_report.sql",
+        "section_sha256_lf": "4c216aa74e0d0800c2bd098ebd6b3ca5401e66957f1fdde9b4e67b9e2f58bb52",
+        "cli_input_sha256": "141e77d03d9524bccab513d7af9150a8d886771f72d3312c7015b45bdc1f52cf",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\n-- SQLite substr()로 ISO 8601 시각에서 YYYY-MM 부분을 추출한다.\nSELECT substr(o.ordered_at, 1, 7) AS order_month,\n       COUNT(DISTINCT o.order_id) AS completed_order_count,\n       SUM(i.quantity * i.unit_price) AS sales_amount\nFROM cafe_order AS o\nINNER JOIN order_item AS i ON i.order_id = o.order_id\nWHERE o.status = 'completed'\nGROUP BY substr(o.ordered_at, 1, 7)\nORDER BY order_month;\n",
+        "database": "bonus.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
+    },
+    {
+      "id": "M02",
+      "screenshot": "results/screenshots/m02.png",
+      "png_sha256": "6c0896e452c9d66b05a5944de92728b1fb52e670b016f31ae3550d99b90bd5ce",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:48:00+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "M02",
+        "source": "bonus/03_report.sql",
+        "section_sha256_lf": "f7c8b2dfe128221067cf51ac7e9dd5497c76a77bb01f38e74109f62cc0c40a60",
+        "cli_input_sha256": "1b0d9f0faebb6ca2f7445564e31c1fede917df46a5cbee2aa5ee768cad22448f",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT m.menu_id, m.name, SUM(i.quantity) AS sold_quantity,\n       SUM(i.quantity * i.unit_price) AS sales_amount\nFROM menu AS m\nINNER JOIN order_item AS i ON i.menu_id = m.menu_id\nINNER JOIN cafe_order AS o ON o.order_id = i.order_id\nWHERE o.status = 'completed'\nGROUP BY m.menu_id, m.name\nORDER BY sold_quantity DESC, m.menu_id\nLIMIT 5;\n",
+        "database": "bonus.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
+    },
+    {
+      "id": "M03",
+      "screenshot": "results/screenshots/m03.png",
+      "png_sha256": "99e1e86822dcb02fe4b883613c5d41080840fb9de6ca46e043f953ea809d95ce",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:48:01+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "M03",
+        "source": "bonus/03_report.sql",
+        "section_sha256_lf": "2f645f4d00e88440e2ceea7a6e6460c3e7f5adb30862d2705a1a5ce1998c091b",
+        "cli_input_sha256": "89f2cff52e671bbcc2b68c74908b052fb735ba98d100b9338770a69a36fc6395",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\n-- 100.0은 정수 나눗셈을 피한다. 구매 고객이 0명이면 비율은 NULL(정의 불가)이다.\nSELECT COUNT(*) AS purchasing_customers,\n       COALESCE(SUM(CASE WHEN order_count >= 2 THEN 1 ELSE 0 END), 0) AS repeat_customers,\n       ROUND(100.0 * SUM(CASE WHEN order_count >= 2 THEN 1 ELSE 0 END)\n             / NULLIF(COUNT(*), 0), 2) AS repeat_customer_rate_percent\nFROM (\n    SELECT customer_id, COUNT(*) AS order_count\n    FROM cafe_order\n    WHERE status = 'completed'\n    GROUP BY customer_id\n) AS customer_orders;\n",
+        "database": "bonus.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
+    },
+    {
+      "id": "E01",
+      "screenshot": "results/screenshots/e01.png",
+      "png_sha256": "2802c2d3045c530cb7e962731725725da5289aec46d8772d0589bc94d07649fe",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:48:10+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "E01",
+        "source": "bonus/04_evidence.sql",
+        "section_sha256_lf": "a27b3568c8627c578c80c60a94655ccdd8c7ef7393b9882145b7bbbd183a9440",
+        "cli_input_sha256": "aa4293a0cc4023832622e363311e6f6780d5084a2e2be5c02d6132073bca23cb",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT 'customer' AS table_name, COUNT(*) AS row_count FROM customer\nUNION ALL SELECT 'menu', COUNT(*) FROM menu\nUNION ALL SELECT 'cafe_order', COUNT(*) FROM cafe_order\nUNION ALL SELECT 'order_item', COUNT(*) FROM order_item;\n",
+        "database": "bonus.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
+    },
+    {
+      "id": "E02",
+      "screenshot": "results/screenshots/e02.png",
+      "png_sha256": "41ce1375046f5eb5a05d70652badd6e70782892786b897bf58c062ba8daa37f8",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:48:11+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "E02",
+        "source": "bonus/04_evidence.sql",
+        "section_sha256_lf": "33bb23c2b4162efe461a66cd72062d32924049a9b13608ca7e5178967fa1b3d8",
+        "cli_input_sha256": "7ca33c51379a9f316deef4d41d0a5d19051a0d0584d16280f816452280d80c65",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\n-- EXPECT_ERROR: FOREIGN KEY constraint failed\nDELETE FROM customer WHERE customer_id = 1;\n",
+        "database": "bonus.db",
+        "exit_code": 1,
+        "expected_error": "FOREIGN KEY constraint failed"
+      }
+    },
+    {
+      "id": "E03",
+      "screenshot": "results/screenshots/e03.png",
+      "png_sha256": "32789124d868e9d9cb2fbacbd44a01e5d5fbadc50499f91d3dce3e9eaf5dc32d",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:48:11+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "E03",
+        "source": "bonus/04_evidence.sql",
+        "section_sha256_lf": "19d3bb3fd765aae4854d78fd213ef807787252872a87959b101e326cd1ef2cfa",
+        "cli_input_sha256": "aa6e06c6b82204fd1aa48279677dc7fcee07062b8cc525e9139934161777db29",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\n-- EXPECT_ERROR: UNIQUE constraint failed: customer.customer_id\nINSERT INTO customer (customer_id, name, email, joined_on)\nVALUES (1, '중복키실습', 'duplicate-key@example.com', '2026-10-04');\n",
+        "database": "bonus.db",
+        "exit_code": 1,
+        "expected_error": "UNIQUE constraint failed: customer.customer_id"
+      }
+    },
+    {
+      "id": "E04",
+      "screenshot": "results/screenshots/e04.png",
+      "png_sha256": "e86f9395b9d4294a09e694888cfa5f3536a631c042c908558334ff70f3d2da71",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:48:12+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "E04",
+        "source": "bonus/04_evidence.sql",
+        "section_sha256_lf": "d631edeedac71bf94b4129fc5492124e07de4dbb614ff885e7292a8051072bab",
+        "cli_input_sha256": "cafa1eee4a75a337383c932b08ab0ae942f439217bc56b5273a454f6dc597a1c",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT c.customer_id, c.name, o.order_id\nFROM customer AS c\nINNER JOIN cafe_order AS o ON o.customer_id = c.customer_id\nWHERE c.customer_id IN (1, 11)\nORDER BY c.customer_id, o.order_id;\n",
+        "database": "bonus.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
+    },
+    {
+      "id": "E05",
+      "screenshot": "results/screenshots/e05.png",
+      "png_sha256": "9f32ec6e6d28352bf22b781fb87c4372d54a2d0b8830267715097ef41a11cb37",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:48:13+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "E05",
+        "source": "bonus/04_evidence.sql",
+        "section_sha256_lf": "443b93bc40f46d72c1b9f967c60d5f8583674ffa6dab5a664ab4091b3ec483d9",
+        "cli_input_sha256": "aa4b089de0467ef41649382c87eff931bd894922ea10dc127b2a1b0f6681d7c7",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT c.customer_id, c.name, o.order_id\nFROM customer AS c\nLEFT JOIN cafe_order AS o ON o.customer_id = c.customer_id\nWHERE c.customer_id IN (1, 11)\nORDER BY c.customer_id, o.order_id;\n",
+        "database": "bonus.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
+    },
+    {
+      "id": "E06",
+      "screenshot": "results/screenshots/e06.png",
+      "png_sha256": "989295f0f331bf03cd0b77d233d0819b454711fccf2504c3fd435f78633174c0",
+      "width": 2560,
+      "height": 1380,
+      "captured_at_local": "2026-10-21T17:48:14+0900",
+      "sqlite_version": "3.54.1 2026-10-16 14:45:20 555e07ef33f69a0957d24d8e555b702464a131d6f1607f4c3c1e4551e8e6ca76 (64-bit)",
+      "execution": {
+        "id": "E06",
+        "source": "bonus/04_evidence.sql",
+        "section_sha256_lf": "cb738d04b41c47566849903f63fcce9b348cb14226c7ff412f945a41f733e185",
+        "cli_input_sha256": "b42b2f2c1cbfb6e677f549de6e494960b8772533c5325ae3ceb6c8287ac022c5",
+        "cli_input": ".nullvalue NULL\n.explain off\nPRAGMA foreign_keys = ON;\nSELECT COUNT(*) AS row_count, SUM(quantity) AS quantity_sum,\n       AVG(quantity) AS quantity_average,\n       COALESCE(SUM(quantity), 0) AS display_sum\nFROM order_item WHERE order_id = 999;\nSELECT COUNT(*) AS all_rows, COUNT(value) AS nonnull_rows,\n       COUNT(DISTINCT value) AS distinct_nonnull_values,\n       SUM(value) AS value_sum, AVG(value) AS value_average\nFROM (SELECT 0 AS value UNION ALL SELECT 0 UNION ALL SELECT NULL) AS sample;\n",
+        "database": "bonus.db",
+        "exit_code": 0,
+        "expected_error": null
+      }
     }
   ]
 }
